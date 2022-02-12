@@ -1,0 +1,30 @@
+/* Background predefinidos */
+.black { background: #000000; }
+.blue { background: #3498db; }
+.green { background: #2ecc71; }
+.grey { background: #ecf0f1; }
+.orange { background: #e67e22; }
+.purple { background: #9b59b6; }
+.red { background: #e74c3c; }
+.white { background: #ffffff; }
+
+/* Opacidades */
+.d-b { display: block; }
+.d-n { display: none; }
+.op-25 { opacity: .2; }
+.op-50 { opacity: .5; }
+.op-75 { opacity: .7; }
+
+/* Margins */
+.mt-25 { margin-top: 25px; }
+.mt-50 { margin-top: 50px; }
+.mt-75 { margin-top: 75px; }
+.mt-100 { margin-top: 100px; }
+
+.mb-25 { margin-bottom: 25px; }
+.mb-50 { margin-bottom: 50px; }
+.mb-75 { margin-bottom: 75px; }
+.mb-100 { margin-bottom: 100px; }
+
+/* Diseño */
+.p-a { position: absolute; }

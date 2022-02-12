@@ -1,0 +1,97 @@
+//@import "variables-globales.scss";
+
+/* -------- Blog Body -------- */
+h1, p{
+    margin: 0;
+}
+.titular{
+    padding: 120px 0 90px 0;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.cover{
+    margin: 0 auto;
+    max-width: 1200px;
+    border-top: 3px solid gray;
+    border-bottom: 3px solid gray;
+    padding: 15px 0 30px 0;
+}
+.cover-pic{
+    margin: 30px 0 30px 0;
+    width: 100%;
+    height: 550px;
+    background-image: url(../images/blog/181203-arquetipos-marca-cabecera.png);
+    background-size: cover;
+}
+
+.blog-a{
+    top: 30px;
+    margin: 0 auto;
+    max-width: 1200px;
+    grid-gap: .2rem;
+    padding: 15px 0 90px 0;
+}
+.blog-text{
+    padding: 140px 0 140px 0;
+    position: relative;
+    width: 70%;
+    margin: 0 auto;
+}
+.blog{
+    width: 100%; 
+    height: 700px; 
+    background-size: cover;
+}
+.arquetipos p{
+    border-bottom: 3px solid gray;
+    padding: 80px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 60%;
+}
+.blog.cover1{
+    background-image: url(../images/blog/Rolex-Submariner-5513-5982.jpg);
+}
+.blog.cover2{
+    background-image: url(../images/blog/al04-1024x897.jpg);
+}
+.blog.cover3{
+    background-image: url(../images/blog/diesel-deisel-cover-nssmag.png);
+}
+.blog.cover4{
+    background-image: url(../images/blog/danone-9d86ea5456.jpg);
+}
+.blog.cover5{
+    background-image: url(../images/blog/shutterstock-mcdonalds-big-mac-archivo-1234.jpg);
+}
+.blog.cover6{
+    background-image: url(../images/blog/ikea-third-party-retail-websites-e1513609708935.jpg);
+}
+.blog.cover7{
+    background-image: url(../images/blog/jeffrey-herlings-racing-to-victory-in-red-bull-knock-out-2016.jpg);
+}
+.blog.cover8{
+    background-image: url(../images/blog/HP-Spectre.jpg);
+}
+.blog.cover9{
+    background-image: url(../images/blog/absolut-vodka.jpg);
+}
+.blog.cover10{
+    background-image: url(../images/blog/Martini_131.jpg);
+}
+.blog.cover11{
+    background-image: url(../images/blog/20170811-oreos-vicky-wasik-3.jpg);
+}
+.blog.cover12{
+    background-image: url(../images/blog/apple_new_store_visual_identity_campaign_the_branding_journal_5.jpg);
+}
+.blog-footer{
+    position: relative;
+    top: 50px;
+    border-top: 3px solid gray; 
+    margin: 0 auto;
+    max-width: 1200px;
+}
+.blog-footer p{
+    padding: 50px 0 50px 0;
+}

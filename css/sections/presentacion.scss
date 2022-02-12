@@ -1,0 +1,46 @@
+
+.presentation{
+    margin: 0 auto 2.5em auto;
+    width: 96vw;
+    padding: 40px 0 40px;
+    border-bottom: 1px solid $border-principal;
+}
+
+.info{
+    max-width: 1200px;
+    margin: 0 auto;
+    white-space: nowrap;
+    display: grid;
+    grid-gap: 0.2rem;
+    grid-template-columns: 50% 50% 1fr;
+    grid-template-rows: repeat(1, 1fr);
+    grid-template-areas:
+        "brick-1 brick-2";
+}
+.info div{
+    display: inline-block;
+
+}
+.descripcion{
+    position: relative;
+    grid-area: brick-1;
+    padding: 0 3em 0 3em;
+    border-right: 1px solid $border-principal;
+}
+.descripcion p{
+    color: $tipography-color;
+    margin-top: 15px;
+    white-space: normal;
+}
+.info-derecha{
+    position: relative;
+    grid-area: brick-2;
+    padding-left: 3em;
+    ul{
+        padding: 0;
+        color: $tipography-color;
+    }
+}
+.skills{
+    list-style: none;
+}

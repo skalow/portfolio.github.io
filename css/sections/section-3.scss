@@ -1,0 +1,112 @@
+/* -------- Section-b -------- */
+.section-c{
+    position: relative;
+    max-width: 1500px;
+    display: grid;
+    color: $tipography-color;
+    margin: 0 auto;
+    grid-gap: .2rem;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows:repeat(2,400px);
+    grid-template-areas: 
+        "sa-1 sa-2 sa-3"
+        "sa-4 sa-5 sa-6"
+        "sa-7 sa-8 sa-9";
+        h1{
+            text-align: center;
+            padding-bottom: 20px;
+            border-bottom: solid 2px $border-principal;
+        }
+    div{
+        a{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            top: 0;
+            left: 0;
+            z-index: 0;
+        }
+    }
+}
+/* -------- Seccion-a -------- */
+.sc-info-box{
+    background-color: $hover-box;
+    width: 95%;
+    height: 69%;
+    margin: 0 auto;
+    margin-top: 13px;
+    padding-top: 100px;
+    opacity: 0;
+    transition: .3s;
+    cursor: pointer;
+    &:hover{
+        opacity: 1;
+        width: 100%;
+        height: 75%;
+        margin-top: 0;
+        transition: .3s;
+    }
+}
+.sc-info{
+    width: 35%;
+    height: 67%;
+    margin: 0 auto;
+    p{
+        text-align: justify;
+    }
+}
+.sc-1{
+    position: relative;
+    grid-area: sa-1;
+    background-image: $s-3-1;
+    background-size: cover;
+}
+.sc-2{
+    position: relative;
+    grid-area: sa-2;
+    background-image: $s-3-2;
+    background-size: cover;
+}
+.sc-3{
+    position: relative;
+    grid-area: sa-3;
+    background-image: $s-3-3;
+    background-size: cover;
+}
+.sc-4{
+    position: relative;
+    grid-area: sa-4;
+    background-image: $s-3-4;
+    background-size: cover;
+}
+.sc-5{
+    position: relative;
+    grid-area: sa-5;
+    background-image: $s-3-5;
+    background-size: cover;
+}
+.sc-6{
+    position: relative;
+    grid-area: sa-6;
+    background-image: $s-3-6;
+    background-size: cover;
+}
+.sc-7{
+    position: relative;
+    grid-area: sa-7;
+    background-image: $s-3-7;
+    background-size: cover;
+}
+.sc-8{
+    position: relative;
+    grid-area: sa-8;
+    background-image: $s-3-8;
+    background-size: cover;
+}
+.sc-9{
+    position: relative;
+    grid-area: sa-9;
+    background-image: $s-3-9;
+    background-size: cover;
+}

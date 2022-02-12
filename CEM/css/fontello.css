@@ -1,0 +1,134 @@
+@font-face {
+  font-family: 'fontello';
+  src: url('font/fontello.eot?9345793');
+  src: url('font/fontello.eot?9345793#iefix') format('embedded-opentype'),
+       url('font/fontello.woff2?9345793') format('woff2'),
+       url('font/fontello.woff?9345793') format('woff'),
+       url('font/fontello.ttf?9345793') format('truetype'),
+       url('font/fontello.svg?9345793#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'fontello';
+    src: url('../font/fontello.svg?9345793#fontello') format('svg');
+  }
+}
+*/
+ 
+ [class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+ 
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+ 
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+ 
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+ 
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+ 
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+ 
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+ 
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+ 
+.icon-productividad:before { content: '\e800'; } /* '' */
+.icon-general:before { content: '\e801'; } /* '' */
+.icon-plantilla:before { content: '\e802'; } /* '' */
+.icon-fin-de-sesion:before { content: '\e803'; } /* '' */
+.icon-inicio-de-sesion:before { content: '\e804'; } /* '' */
+.icon-vencidos-recepcion:before { content: '\e805'; } /* '' */
+.icon-por-fabricar:before { content: '\e806'; } /* '' */
+.icon-venta:before { content: '\e807'; } /* '' */
+.icon-en-tiempo-no-recepcionados:before { content: '\e808'; } /* '' */
+.icon-vencidos-interpretacion:before { content: '\e809'; } /* '' */
+.icon-incidencia:before { content: '\e80a'; } /* '' */
+.icon-maquillado:before { content: '\e80b'; } /* '' */
+.icon-cambio-de-área:before { content: '\e80c'; } /* '' */
+.icon-reunión:before { content: '\e80d'; } /* '' */
+.icon-atendidos:before { content: '\e80e'; } /* '' */
+.icon-consultorio:before { content: '\e80f'; } /* '' */
+.icon-estudios-vencidos-no-recepcionados:before { content: '\e810'; } /* '' */
+.icon-pendientes-por-imprimir:before { content: '\e811'; } /* '' */
+.icon-mayor-que:before { content: '\e812'; } /* '' */
+.icon-flecha-abajo:before { content: '\e813'; } /* '' */
+.icon-vencidos:before { content: '\e814'; } /* '' */
+.icon-tablas:before { content: '\e815'; } /* '' */
+.icon-grafica:before { content: '\e816'; } /* '' */
+.icon-consultorio-encendido:before { content: '\e817'; } /* '' */
+.icon-capacidad:before { content: '\e818'; } /* '' */
+.icon-inicio:before { content: '\e819'; } /* '' */
+.icon-tap:before { content: '\e81a'; } /* '' */
+.icon-menor-que:before { content: '\e81b'; } /* '' */
+.icon-flecha-arriba:before { content: '\e81c'; } /* '' */
+.icon-pacientes-únicos:before { content: '\e81d'; } /* '' */
+.icon-registros:before { content: '\e81e'; } /* '' */
+.icon-ausentismo:before { content: '\e81f'; } /* '' */
+.icon-flip:before { content: '\e820'; } /* '' */
+.icon-estudios-realizados:before { content: '\e821'; } /* '' */
+.icon-tep:before { content: '\e822'; } /* '' */
+.icon-capacidad-superada:before { content: '\e823'; } /* '' */
+.icon-igual:before { content: '\e824'; } /* '' */
+.icon-procesos:before { content: '\e825'; } /* '' */
+.icon-consultorios-apagados:before { content: '\e826'; } /* '' */
+.icon-descanso:before { content: '\e827'; } /* '' */
+.icon-tiempos-de-atención-altos:before { content: '\e828'; } /* '' */
+.icon-tiempos-de-atención-bajos:before { content: '\e829'; } /* '' */
+.icon-clinica:before { content: '\e82a'; } /* '' */
+.icon-tenp:before { content: '\e82b'; } /* '' */
+.icon-acumulados:before { content: '\e82c'; } /* '' */
+.icon-baño:before { content: '\e82d'; } /* '' */
+.icon-recepcion:before { content: '\e82e'; } /* '' */
+.icon-apagado:before { content: '\e82f'; } /* '' */
+.icon-consultorios-programados:before { content: '\e830'; } /* '' */
+.icon-nombre-del-colaborador:before { content: '\e831'; } /* '' */
+.icon-alerta:before { content: '\e832'; } /* '' */
+.icon-interpretando:before { content: '\e833'; } /* '' */
+.icon-pendiente-por-transmitir:before { content: '\e834'; } /* '' */
+.icon-por-interpretar:before { content: '\e835'; } /* '' */
+.icon-pendientes-por-imprimir-1:before { content: '\e836'; } /* '' */
+.icon-recepcion-vencidos:before { content: '\e837'; } /* '' */
+.icon-recepcionados-en-tiempo:before { content: '\e838'; } /* '' */
+.icon-cerrar-sesion:before { content: '\e839'; } /* '' */
+.icon-servicios-autorizados_laboratorio-clínico:before { content: '\e83a'; } /* '' */
+.icon-servicios-autorizados_lentes:before { content: '\e83b'; } /* '' */
+.icon-servicios-autorizados_mastografía:before { content: '\e83c'; } /* '' */
+.icon-servicios-autorizados_papanicolaou:before { content: '\e83d'; } /* '' */
+.icon-servicios-autorizados_rayos-x:before { content: '\e83e'; } /* '' */
+.icon-servicios-autorizados_resonancia-magnética:before { content: '\e83f'; } /* '' */
+.icon-servicios-autorizados_tomografía:before { content: '\e840'; } /* '' */
+.icon-servicios-autorizados_ultrasonido:before { content: '\e841'; } /* '' */
+.icon-servicios-autorizados_densitometría-osea:before { content: '\e842'; } /* '' */
+.icon-servicios-autorizados_consulta-nutricional:before { content: '\e843'; } /* '' */
+.icon-servicios-autorizados_electrocardiograma:before { content: '\e844'; } /* '' */
+.icon-tap-1:before { content: '\e845'; } /* '' */
+.icon-alerta-detonada:before { content: '\e846'; } /* '' */
+.icon-alerta-campana:before { content: '\e847'; } /* '' */
+.icon-alerta-notificada:before { content: '\e848'; } /* '' */
+.icon-alerta-visualizada:before { content: '\e849'; } /* '' */
+.icon-no-notificada:before { content: '\e84a'; } /* '' */
+.icon-inactividad:before { content: '\e84b'; } /* '' */
+.icon-estudios-no-recepcionados:before { content: '\e84c'; } /* '' */

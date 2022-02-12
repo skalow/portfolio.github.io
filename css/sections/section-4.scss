@@ -1,0 +1,88 @@
+/* -------- Section-c -------- */
+.section-d{
+    position: relative;
+    max-width: 1500px;
+    display: grid;
+    color: $tipography-color;
+    margin: 0 auto;
+    grid-gap: .2rem;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 300px;
+    grid-template-areas: 
+        "sa-1 sa-2 sa-3 sa-4 sa-5 sa-6";
+        h1{
+            margin: 0 auto;
+            margin-top: 60px;
+            text-align: center;
+            padding-bottom: 20px;
+            border-bottom: solid 2px $border-principal;
+        }
+}
+.text-center{
+    text-align: center;
+}
+.sd-info-box{
+    background-color: $body-bg-color;
+    width: 95%;
+    height: 68%;
+    margin: 0 auto;
+    margin-top: 8px;
+    padding-top: 28px;
+    opacity: 0;
+    transition: .3s;
+    cursor: pointer;
+    &:hover{
+        opacity: 1;
+        width: 100%;
+        height: 75%;
+        margin-top: 0;
+        transition: .3s;
+    }
+}
+.sd-info{
+    width: 35%;
+    height: 67%;
+    margin: 0 auto;
+}
+.sd-1{
+    position: relative;
+    grid-area: sa-1;
+    background-image: $s-4-1;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.sd-2{
+    position: relative;
+    grid-area: sa-2;
+    background-image: $s-4-2;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.sd-3{
+    position: relative;
+    grid-area: sa-3;
+    background-image: $s-4-3;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.sd-4{
+    position: relative;
+    grid-area: sa-4;
+    background-image: $s-4-4;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.sd-5{
+    position: relative;
+    grid-area: sa-5;
+    background-image: $s-4-5;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.sd-6{
+    position: relative;
+    grid-area: sa-6;
+    background-image: $s-4-6;
+    background-repeat: no-repeat;
+    background-size: contain;
+}

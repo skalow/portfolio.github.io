@@ -1,0 +1,430 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- fonts de google -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <!-- google icons --> 
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Animaciones de la pagina -->
+    <link href="css/animaciones.css" rel="stylesheet">
+    <!-- iconos de font-awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <!-- Hoja de estilos nueva -->
+    <link id="estilo" href="css/cem.css" rel="stylesheet">
+    <!-- iconos nuevos -->
+    <link rel="stylesheet" href="css/fontello.css">
+</head>
+<body>
+    <nav class="header animated slideInDown">
+        <ul>
+            <li>
+                <div id="burguer" class="burguer">
+                    <input type="checkbox"/>
+                    <span class="linea-1"></span>
+                    <span class="linea-2"></span>
+                    <span class="linea-3"></span>
+                </div>
+            </li>
+            <li>
+                <img src="images/logo-sd-white.svg"> 
+            </li>
+        </ul>                                      
+        <div class="areas">
+            <ul>
+                <li>
+                    <label> Area </label> 
+                </li>
+                <li id="todos">
+                    <select id="list-drop" class="selected-areas">
+                        <option selected value="0" data-id="0">Todos</option>
+                        <option value="1" data-id="1">Densitometria</option>
+                        <option value="2" data-id="2">Laboratorio</option>
+                        <option value="3" data-id="3">Mastografia</option>
+                        <option value="4" data-id="4">Papanicolaou</option>
+                        <option value="5" data-id="5">Rayos X</option>
+                        <option value="6" data-id="6">Ultrasonido</option>
+                        <option value="9" data-id="9">Electrocardiograma</option>
+                        <option value="11" data-id="11">Tomografia</option>
+                        <option value="12" data-id="12">Resonancia Magnetica</option>
+                        <option value="16" data-id="16">Nutricion</option>
+                        <option value="-2" data-id="-2">Lentes</option>
+                    </select>
+                </li>
+            </ul>                               
+        </div>
+        <div class="titulo-principal">
+            <h1>Centro de Monitoreo</h1>
+        </div>
+        <div id="switch-color" class="switch-color">
+            <i class="icon-apagado"></i>
+        </div>        
+        <i class="material-icons reload" onclick="location.reload();"> replay </i>
+    </nav>
+    <nav id="panel-izq" class="lateral-left animated slideInLeft">
+        <div class="logout">
+            <i class="material-icons"> power_settings_new </i>
+        </div>
+        <div class="lateral-perfil text-center">                
+                    <img src="images/gustavo.jpg" alt="Profile Picture">                
+                <a href="#profile-nav" class="info" data-toggle="collapse" aria-expanded="false">
+                    <p class="mnp-name">Gustavo Fring</p>
+                    <span class="mnp-desc">Sucursal: </span><span class="mnp-desc">Centro Soporte Institucional</span>
+                </a>
+        </div>
+        <ul class="opciones">
+            <li>
+                <a href="">
+                    <i class="material-icons"> home </i>
+                    <span>inicio</span>
+                    <i class="material-icons drop-option"> arrow_drop_down </i>
+                </a>                
+            </li>
+            <li>
+                <a href="../Administracion/Inicio.aspx">
+                    <i class="material-icons"> dashboard </i>
+                    <span>tableros</span>
+                    <i class="material-icons drop-option"> arrow_drop_down </i>
+                </a>
+                <ul class="opciones-1">
+                    <li><a href="../Administracion/IndicadoresCEM.aspx">&nbsp;&nbsp;&nbsp;&nbsp;Indicadores CEM</a></li>
+                    <li></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <div id="wrapp-panel" class="wrapper-monitoreo animated fadeIn">
+        <div class="row mg-0">
+            <div class="col-sm-3">                             
+                <div class="card">
+                    <div class="card-head row no-gutters">
+                        <div class="col-sm-2">
+                            <i class="icon-tep"></i>
+                        </div>
+                        <div class="col-sm-7">
+                            <h1>TEP</h1>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="ind-clinica"><i class="icon-clinica"></i>22/86</div>
+                        </div>
+                    </div>
+                    <div class="card-body">                  
+                        <div class="grafica pointer">
+                            <span class="chart" data-percent="50">
+                                <span class="percent"></span>
+                            </span>
+                        </div>                           
+                        <div class="row card-foot">
+                            <div class="col-sm-offset-3 col-sm-3">
+                                <i class="icon-acumulados"></i> 225
+                            </div>
+                            <div class="col-sm-3">
+                                <i class="icon-registros"></i> 129
+                            </div>                                                           
+                        </div>                            
+                    </div>                    
+                </div>
+            </div>                        
+            <div class="col-sm-3">                             
+                <div class="card">
+                    <div class="card-head row no-gutters">
+                        <div class="col-sm-2">
+                            <i class="icon-tap"></i>
+                        </div>
+                        <div class="col-sm-7">
+                            <h1>TAP</h1>                            
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="ind-clinica"><i class="icon-clinica"></i>22/86</div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="grafica pointer">
+                            <span class="chart" data-percent="50">
+                                <span class="percent"></span>
+                            </span>
+                        </div>
+                        <div class="row card-foot">
+                            <div class="col-sm-4">
+                                <i class="icon-menor-que"></i><span>TO</span> 550
+                            </div>
+                            <div class="col-sm-4 text-center">
+                                <i class="icon-igual"></i><span>TO</span> 340
+                            </div>
+                            <div class="col-sm-4 text-right">
+                                <i class="icon-mayor-que"></i><span>TO</span> 147
+                            </div>
+                        </div> 
+                    </div>                    
+                </div>
+            </div>
+            <div class="col-sm-3">                             
+                <div class="card">
+                    <div class="card-head row no-gutters">
+                        <div class="col-sm-2">
+                            <i class="icon-consultorios-apagados"></i>
+                        </div>
+                        <div class="col-sm-7">
+                            <h1>CON-OFF</h1>                            
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="ind-clinica"><i class="icon-clinica"></i>22/86</div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                            <div class="grafica pointer">
+                                <span class="chart" data-percent="50">
+                                    <span class="percent"></span>
+                                </span>
+                            </div>
+                            <div class="row card-foot">
+                                <div class="col-sm-4">
+                                    <i class="icon-consultorios-apagados"></i> 114
+                                </div>
+                                <div class="col-sm-4 text-center">
+                                    <i class="icon-consultorio"></i> 780
+                                </div>
+                                <div class="col-sm-4 text-right">
+                                    <i class="icon-capacidad"></i> 450
+                                </div>
+                            </div>               
+                    </div>                    
+                </div>
+            </div>
+            <div class="col-sm-3">                             
+                <div class="card">
+                    <div class="card-head row no-gutters">
+                        <div class="col-sm-2">
+                            <i class="icon-tenp"></i>
+                        </div>
+                        <div class="col-sm-7">
+                            <h1>TENP</h1>                            
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="ind-clinica"><i class="icon-clinica"></i>22/86</div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                            <div class="grafica pointer">
+                                <span class="chart" data-percent="50">
+                                    <span class="percent"></span>
+                                </span>
+                            </div>
+                            <div class="row card-foot">
+                                <div class="col-sm-offset-3 col-sm-3">
+                                    <i class="icon-acumulados"></i> 20
+                                </div>
+                                <div class="col-sm-3">
+                                    <i class="icon-registros"></i> 456
+                                </div>
+                            </div>   
+                    </div>                    
+                </div>
+            </div>
+        </div>        
+        <div class="row mg-0">
+            <div class="col-sm-3">
+                <div class="card">
+                    <div class="card-head row no-gutters">
+                        <div class="col-sm-2">
+                            <i class="icon-alerta-campana"></i>
+                        </div>
+                        <div class="col-sm-7">
+                            <h1>ALERTAS</h1>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="ind-clinica"><i class="icon-clinica"></i>22/86</div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="grafica pointer">
+                            <span class="chart" data-percent="50">
+                                <span class="percent"></span>
+                            </span>
+                        </div>
+                        <div class="row card-foot">
+                            <div class="col-sm-offset-3 col-sm-3">
+                                <i class="icon-alerta-detonada"></i> 225
+                            </div>
+                            <div class="col-sm-3">
+                                <i class="icon-alerta-visualizada"></i> 129
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="card">
+                    <div class="card-head row no-gutters">
+                        <div class="col-sm-2">
+                            <i class="icon-tap"></i>
+                        </div>
+                        <div class="col-sm-7">
+                            <h1>TAP</h1>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="ind-clinica"><i class="icon-clinica"></i>22/86</div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="grafica pointer">
+                            <span class="chart" data-percent="50">
+                                <span class="percent"></span>
+                            </span>
+                        </div>
+                        <div class="row card-foot">
+                            <div class="col-sm-4">
+                                <i class="icon-menor-que"></i><span>TO</span> 550
+                            </div>
+                            <div class="col-sm-4 text-center">
+                                <i class="icon-igual"></i><span>TO</span> 340
+                            </div>
+                            <div class="col-sm-4 text-right">
+                                <i class="icon-mayor-que"></i><span>TO</span> 147
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="card">
+                    <div class="card-head row no-gutters">
+                        <div class="col-sm-2">
+                            <i class="icon-consultorios-apagados"></i>
+                        </div>
+                        <div class="col-sm-7">
+                            <h1>CON-OFF</h1>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="ind-clinica"><i class="icon-clinica"></i>22/86</div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="grafica pointer">
+                            <span class="chart" data-percent="50">
+                                <span class="percent"></span>
+                            </span>
+                        </div>
+                        <div class="row card-foot">
+                            <div class="col-sm-4">
+                                <i class="icon-consultorios-apagados"></i> 114
+                            </div>
+                            <div class="col-sm-4 text-center">
+                                <i class="icon-consultorio"></i> 780
+                            </div>
+                            <div class="col-sm-4 text-right">
+                                <i class="icon-capacidad"></i> 450
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="card">
+                    <div class="card-head row no-gutters">
+                        <div class="col-sm-2">
+                            <i class="icon-tenp"></i>
+                        </div>
+                        <div class="col-sm-7">
+                            <h1>TENP</h1>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="ind-clinica"><i class="icon-clinica"></i>22/86</div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="grafica pointer">
+                            <span class="chart" data-percent="50">
+                                <span class="percent"></span>
+                            </span>
+                        </div>
+                        <div class="row card-foot">
+                            <div class="col-sm-offset-3 col-sm-3">
+                                <i class="icon-acumulados"></i> 20
+                            </div>
+                            <div class="col-sm-3">
+                                <i class="icon-registros"></i> 456
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </div>    
+	<script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="js/jquery.easypiechart.min.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+	<script>
+	$(function() {
+		$('.chart').easyPieChart({
+			easing: 'easeOutBounce',
+			barColor:'#00e450',
+			lineCap:"round",
+			trackColor: "#576574",
+			lineWidth: "5",
+            size: "130",
+            scaleColor: false,            
+			onStep: function(from, to, percent) {
+				$(this.el).find('.percent').text(Math.round(percent));
+			}
+		});
+		var chart = window.chart = $('.chart').data('easyPieChart');
+		$('.js_update').on('click', function() {
+			chart.update(Math.random()*200-100);
+		});
+	});
+    </script>
+    <!-- <script>
+        Highcharts.chart('container', {
+    chart: {
+        backgroundColor: 'transparent',
+        plotBorderWidth: null,
+        plotShadow: false,
+        type: 'pie'
+    },
+    title: {
+        text: 'TEP'
+    },
+    tooltip: {
+        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+    },
+    plotOptions: {
+        pie: {
+            allowPointSelect: true,
+            cursor: 'pointer',
+            dataLabels: {
+                enabled: false
+            },
+            showInLegend: true
+        }
+    },
+    series: [{
+        name: 'Brands',
+        colorByPoint: true,
+        data: [{
+            name: 'Numero de pacientes atendidos',
+            y: 85,
+            sliced: true,
+            selected: true
+        }, {
+            name: 'Acumulados',
+            y: 10
+        }, {
+            name: 'Vencidos',
+            y: 5
+        }]
+    }]
+});
+    </script> -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/monitoreo.js"></script>
+</body>
+</html>
