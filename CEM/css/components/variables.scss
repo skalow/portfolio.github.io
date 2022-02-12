@@ -1,0 +1,58 @@
+// Tipografias
+$roboto:'Roboto', sans-serif;
+$font-extra-chica: 9px;
+$font-chica: 12px;
+$font-mediana: 24px;
+$font-grande: 30px;
+$font-extra-grande: 40px;
+
+//iconos
+$icono-chico: 10px;
+$icono-mediano: 18px;
+$icono-grande: 24px;
+
+// Colores
+$color-fondo: linear-gradient(180deg,#3f3f3f,#181818);
+$color-letra: rgb(255, 255, 255);
+$color-bordes: #bdc3c7;
+
+$rojo: #ed143d;
+$rojo-secondary: desaturate($rojo, 20%);
+
+$verde: #77d353;
+$verde-secondary: darken($verde, 20%);
+
+$naranja: #e66c40;
+$azul: #2c97de;
+
+$gris:#444444;
+$gris-60:rgba($gris, .6);
+
+$negro: #080808;
+$negro-90: rgba($negro, .95);
+
+$border-color-tabla: rgba(255, 255, 255, 0.514);
+$scrollbar-thumb: #ffffff07;
+$scrollbar-thumb-hover: #ffffff21;
+
+$nav-background:#1A1A1A;
+$nav-background-hover: lighten($nav-background, 5%);
+$nav-color-letra: #bdc3c7;
+$icon-hover: lighten($nav-color-letra, 50%);
+
+$color-fondo-tooltip: rgba(0, 0, 0, 0.863);
+$color-cabecero-hover: rgba(255, 255, 255, 0.295);
+
+
+// Colores alternativos de la versions Blanca
+$color-fondo-2: linear-gradient(0deg,#e7e7e7,#ffffff);
+$color-letra-2: #343F4B;
+$color-bordes-2: rgb(52, 63, 75);
+$tabla-bordes-2: #A4A4A4;
+$rojo-2: #CB3E4B;
+$verde-2: #77d353;
+$naranja-2: #e66c40;
+$azul-2: #2c97de;
+$rojo-indicadores-2: #cc3e4b;
+$nav-color-letra-2: #bdc3c7;
+$botones-off-2: #333;
