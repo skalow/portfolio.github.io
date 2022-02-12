@@ -1,0 +1,996 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Fuente de google -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <!-- google icons -->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Animaciones de la pagina -->
+    <link href="css/animaciones.css" rel="stylesheet">
+    <!-- iconos de font-awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <!-- Hoja de estilos nueva -->
+    <link id="estilo" href="css/cem.css" rel="stylesheet">
+    <!-- iconos creados por el equipo de diseño de sistemas de Salud digna -->
+    <link href="css/fontello.css" rel="stylesheet">
+    <!-- css de prueba que  sera ingresado al monitoreo.css -->
+</head>
+<body>
+    <div class="modal-dialog" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h4 class="modal-title">Bloqueo de alerta <span></span><span></span></h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <label>Hora</label>
+                        <select id="ddlTipoBloqueo" class="form-control">
+                            <option value="13">13</option>
+                            <option value="14">14</option>
+                            <option value="15">15</option>
+                            <option value="16">16</option>
+                            <option value="17">17</option>
+                            <option value="18">18</option>
+                            <option value="19">19</option>
+                            <option value="20">20</option>
+                            <option value="21">21</option>
+                            <option value="22">22</option>
+                            <option value="23">23</option>
+                            <option value="24">24</option>
+                        </select>
+                    </div>
+                    <div class="col-sm-6">
+                        <label>Fecha</label>
+                        <input type="text" class="form-control datepick" name="daterange-singe-date-picker" value="10/24/1984" id="datetimepicker4">
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary">Agregar Bloque</button>
+            </div>
+        </div>
+    </div>
+    <nav class="header animated slideInDown">
+        <ul>
+            <li>
+                <div id="burguer" class="burguer">
+                    <input type="checkbox" />
+                    <span class="linea-1"></span>
+                    <span class="linea-2"></span>
+                    <span class="linea-3"></span>
+                </div>
+            </li>
+            <li>
+                <img src="images/logo-sd-white.svg">
+            </li>
+        </ul>
+        <div class="areas">
+            <ul>
+                <li>
+                    <label> Area </label>
+                </li>
+                <li id="todos">
+                    <select id="list-drop" class="selected-areas">
+                        <option selected value="0" data-id="0">Todos</option>
+                        <option value="1" data-id="1">Densitometria</option>
+                        <option value="2" data-id="2">Laboratorio</option>
+                        <option value="3" data-id="3">Mastografia</option>
+                        <option value="4" data-id="4">Papanicolaou</option>
+                        <option value="5" data-id="5">Rayos X</option>
+                        <option value="6" data-id="6">Ultrasonido</option>
+                        <option value="9" data-id="9">Electrocardiograma</option>
+                        <option value="11" data-id="11">Tomografia</option>
+                        <option value="12" data-id="12">Resonancia Magnetica</option>
+                        <option value="16" data-id="16">Nutricion</option>
+                        <option value="-2" data-id="-2">Lentes</option>
+                    </select>
+                </li>
+                <li>
+                    <div class="searched">
+                        <i class="material-icons"> search </i>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="titulo-principal">
+            <h1>Centro de Monitoreo</h1>
+        </div>
+        <div class="flip-alertas">
+            <i id="btn-flip-2" class="icon-flip pointer"></i>
+        </div>
+        <div id="switch-color" class="switch-color">
+            <i class="icon-apagado"></i>
+        </div>
+        <i class="material-icons reload left" onclick="location.reload();"> replay </i>
+    </nav>
+    <nav id="panel-izq" class="lateral-left animated slideInLeft">
+        <div class="logout">
+            <i class="material-icons"> power_settings_new </i>
+        </div>
+        <div class="lateral-perfil text-center">
+            <img src="images/gustavo.jpg" alt="Profile Picture">
+            <a href="#profile-nav" class="info" data-toggle="collapse" aria-expanded="false">
+                <p class="mnp-name">Gustavo Fring</p>
+                <span class="mnp-desc">Sucursal: </span><span class="mnp-desc">Centro Soporte Institucional</span>
+            </a>
+        </div>
+        <ul class="opciones">
+            <li>
+                <a href="">
+                    <i class="material-icons"> home </i>
+                    <span>inicio</span>
+                    <i class="material-icons drop-option"> arrow_drop_down </i>
+                </a>
+            </li>
+            <li>
+                <a href="../Administracion/Inicio.aspx">
+                    <i class="material-icons"> dashboard </i>
+                    <span>tableros</span>
+                    <i class="material-icons drop-option"> arrow_drop_down </i>
+                </a>
+                <ul class="opciones-1">
+                    <li><a href="../Administracion/IndicadoresCEM.aspx">&nbsp;&nbsp;&nbsp;&nbsp;Indicadores CEM</a></li>
+                    <li></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <i class="material-icons " onclick="location.reload();"> replay </i>
+    <div id="wrapp-panel" class="wrapper-monitoreo animated fadeIn">
+        <div class="row grid no-gutters">
+            <div class="col-sm-3">
+                <div class="alert-panel red">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <h1>ALERTAS</h1>
+                        </div>
+                        <div class="col-sm-6">
+                            <h1 class="panel-title">200</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="alert-panel orange">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="alert-indicator-small">CLÍN. ALERTADAS</div>
+                            <span class="alert-indicator">50/200</span>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="alert-percent">
+                                200%
+                            </div>
+                            <div class="demo-graphic-dona">
+                                <img src="images/dona.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="alert-panel green">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="alert-indicator-small">VISUALIZADOS</div>
+                            <span class="alert-indicator">50/200</span>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="alert-percent">
+                                200%
+                            </div>
+                            <div class="demo-graphic-dona">
+                                <img src="images/dona.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="alert-panel blue">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="alert-indicator-small">NOTIFICADAS</div>
+                            <span class="alert-indicator">50/200</span>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="alert-percent">
+                                200%
+                            </div>
+                            <div class="demo-graphic-dona">
+                                <img src="images/dona.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row grid">
+            <div class="col-sm-6 pd-lt-10">
+                <div class="tab-graphs">
+                    <div class="right-tabs alertas">
+                        <table>
+                            <thead class="right-tab-head alertas-head">
+                                <tr id="alerta-clinica" class="alertas-header ocultar">
+                                    <th colspan="4">CULHUACAN</th>
+                                    <th><i id="close-alerta-clinica" class="material-icons drop-option"> clear </i></th>
+                                </tr>
+                                <tr id="header-alertas-1">
+                                    <th class="col4">CLÍNICA</th>
+                                    <th>TOTAL</th>
+                                    <th>% VIS.</th>
+                                    <th>% NOT.</th>
+                                    <th>TPV</th>
+                                </tr>
+                                <tr id="header-alertas-2" class="ocultar">
+                                    <th>HORA</th>
+                                    <th>ÁREA</th>
+                                    <th>TIPO</th>
+                                    <th>HR VISUALIZADOS</th>
+                                    <th>NOTIFICADOS</th>
+                                </tr>
+                            </thead>
+                        </table>
+                        <div class="tab-alertas extend">
+                            <table>
+                                <tbody id="tabla-alertas-1" class="right-tab-body alertas">
+                                    <tr>
+                                        <td id="open-alerta-clinica">Culhuacan</td>
+                                        <td>56</td>
+                                        <td>15%</td>
+                                        <td>10%</td>
+                                        <td>20</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Torreón</td>
+                                        <td>24</td>
+                                        <td>20%</td>
+                                        <td>10%</td>
+                                        <td>20</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Tijuana</td>
+                                        <td>34</td>
+                                        <td>20%</td>
+                                        <td>10%</td>
+                                        <td>20 </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Guasave</td>
+                                        <td>75</td>
+                                        <td>13%</td>
+                                        <td>10%</td>
+                                        <td>20</td>
+                                    </tr>
+                                    <tr>
+                                        <td>León</td>
+                                        <td>35</td>
+                                        <td>8%</td>
+                                        <td>10%</td>
+                                        <td>20</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Mexicali</td>
+                                        <td>76</td>
+                                        <td>3%</td>
+                                        <td>10%</td>
+                                        <td>20</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Guaymas</td>
+                                        <td>45</td>
+                                        <td>21%</td>
+                                        <td>10%</td>
+                                        <td>20</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Mepetec</td>
+                                        <td>73</td>
+                                        <td>16%</td>
+                                        <td>10%</td>
+                                        <td>20</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Morelia</td>
+                                        <td>12</td>
+                                        <td>8%</td>
+                                        <td>10%</td>
+                                        <td>20</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Veracruz</td>
+                                        <td>41</td>
+                                        <td>9%</td>
+                                        <td>10%</td>
+                                        <td>20</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Tecamac</td>
+                                        <td>16</td>
+                                        <td>8%</td>
+                                        <td>10%</td>
+                                        <td>20</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Miguel Hidalgo</td>
+                                        <td>37</td>
+                                        <td>12%</td>
+                                        <td>10%</td>
+                                        <td>20</td>
+                                    </tr>
+                                    <tr>
+                                        <td>San Cristobal de las Casas</td>
+                                        <td>64</td>
+                                        <td>12%</td>
+                                        <td>10%</td>
+                                        <td>20</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Monterrey</td>
+                                        <td>79</td>
+                                        <td>9%</td>
+                                        <td>10%</td>
+                                        <td>20</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Monterrey</td>
+                                        <td>64</td>
+                                        <td>9%</td>
+                                        <td>10%</td>
+                                        <td>20</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Monterrey</td>
+                                        <td>56</td>
+                                        <td>12%</td>
+                                        <td>10%</td>
+                                        <td>20</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Monterrey</td>
+                                        <td>83</td>
+                                        <td>46%</td>
+                                        <td>10%</td>
+                                        <td>20</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Monterrey</td>
+                                        <td>37</td>
+                                        <td>23%</td>
+                                        <td>10%</td>
+                                        <td>20</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Monterrey</td>
+                                        <td>34</td>
+                                        <td>13%</td>
+                                        <td>10%</td>
+                                        <td>20</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Monterrey</td>
+                                        <td>87</td>
+                                        <td>07%</td>
+                                        <td>10%</td>
+                                        <td>20</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Monterrey</td>
+                                        <td>31</td>
+                                        <td>3%</td>
+                                        <td>10%</td>
+                                        <td>20</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Monterrey</td>
+                                        <td>12</td>
+                                        <td>11%</td>
+                                        <td>10%</td>
+                                        <td>20</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Monterrey</td>
+                                        <td>54</td>
+                                        <td>1%</td>
+                                        <td>10%</td>
+                                        <td>20</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Monterrey</td>
+                                        <td>35</td>
+                                        <td>23%</td>
+                                        <td>10%</td>
+                                        <td>20</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Monterrey</td>
+                                        <td>43</td>
+                                        <td>14%</td>
+                                        <td>10%</td>
+                                        <td>20</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Monterrey</td>
+                                        <td>76</td>
+                                        <td>8%</td>
+                                        <td>10%</td>
+                                        <td>20</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Monterrey</td>
+                                        <td>56</td>
+                                        <td>6%</td>
+                                        <td>10%</td>
+                                        <td>20</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Monterrey</td>
+                                        <td>35</td>
+                                        <td>7%</td>
+                                        <td>10%</td>
+                                        <td>20</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Monterrey</td>
+                                        <td>54</td>
+                                        <td>4%</td>
+                                        <td>10%</td>
+                                        <td>20</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Monterrey</td>
+                                        <td>16</td>
+                                        <td>9%</td>
+                                        <td>10%</td>
+                                        <td>20</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Monterrey</td>
+                                        <td>18</td>
+                                        <td>3%</td>
+                                        <td>10%</td>
+                                        <td>20</td>
+                                    </tr>
+                                </tbody>
+                                <tbody id="tabla-alertas-2" class="right-tab-body alertas ocultar">
+                                    <tr>
+                                        <td>01:03 p. m.</td>
+                                        <td><i class="icon-servicios-autorizados_lentes"></i> LEN</td>
+                                        <td>CON</td>
+                                        <td>03:03 p. m.</td>
+                                        <td><i class="icon-alerta-notificada green"></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td>01:03 p. m.</td>
+                                        <td><i class="icon-servicios-autorizados_electrocardiograma"></i> EKG</td>
+                                        <td>CAP</td>
+                                        <td>03:03 p. m.</td>
+                                        <td><i class="icon-alerta-notificada green"></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td>01:03 p. m.</td>
+                                        <td><i class="icon-servicios-autorizados_papanicolaou"></i> PAP</td>
+                                        <td>CAP</td>
+                                        <td>03:03 p. m.</td>
+                                        <td><i class="icon-no-notificada red"></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td>01:03 p. m.</td>
+                                        <td><i class="icon-servicios-autorizados_ultrasonido"></i> US</td>
+                                        <td>CON</td>
+                                        <td>03:03 p. m.</td>
+                                        <td><i class="icon-no-notificada red"></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td>01:03 p. m.</td>
+                                        <td><i class="icon-servicios-autorizados_ultrasonido"></i> US</td>
+                                        <td>CAP</td>
+                                        <td>03:03 p. m.</td>
+                                        <td><i class="icon-no-notificada red"></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td>01:03 p. m.</td>
+                                        <td><i class="icon-servicios-autorizados_rayos-x"></i> RX</td>
+                                        <td>TEP</td>
+                                        <td>03:03 p. m.</td>
+                                        <td><i class="icon-no-notificada red"></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td>01:03 p. m.</td>
+                                        <td><i class="icon-servicios-autorizados_mastografía"></i> MAS</td>
+                                        <td>TEP</td>
+                                        <td>03:03 p. m.</td>
+                                        <td><i class="icon-no-notificada red"></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td>01:03 p. m.</td>
+                                        <td><i class="icon-servicios-autorizados_tomografía"></i> TOM</td>
+                                        <td>CON</td>
+                                        <td>03:03 p. m.</td>
+                                        <td><i class="icon-no-notificada red"></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td>01:03 p. m.</td>
+                                        <td><i class="icon-servicios-autorizados_ultrasonido"></i> US</td>
+                                        <td>TAP</td>
+                                        <td>03:03 p. m.</td>
+                                        <td><i class="icon-no-notificada red"></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td>01:03 p. m.</td>
+                                        <td><i class="icon-servicios-autorizados_tomografía"></i> TOM</td>
+                                        <td>TEP</td>
+                                        <td>03:03 p. m.</td>
+                                        <td><i class="icon-no-notificada red"></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td>01:03 p. m.</td>
+                                        <td><i class="icon-servicios-autorizados_papanicolaou"></i> PAP</td>
+                                        <td>CON</td>
+                                        <td>03:03 p. m.</td>
+                                        <td><i class="icon-no-notificada red"></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td>01:03 p. m.</td>
+                                        <td><i class="icon-servicios-autorizados_papanicolaou"></i> PAP</td>
+                                        <td>TAP</td>
+                                        <td>03:03 p. m.</td>
+                                        <td><i class="icon-no-notificada red"></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td>01:03 p. m.</td>
+                                        <td><i class="icon-servicios-autorizados_electrocardiograma"></i> EKG</td>
+                                        <td>CON</td>
+                                        <td>03:03 p. m.</td>
+                                        <td><i class="icon-no-notificada red"></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td>01:03 p. m.</td>
+                                        <td><i class="icon-servicios-autorizados_electrocardiograma"></i> EKG</td>
+                                        <td>CON</td>
+                                        <td>03:03 p. m.</td>
+                                        <td><i class="icon-no-notificada red"></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td>01:03 p. m.</td>
+                                        <td><i class="icon-servicios-autorizados_papanicolaou"></i> PAP</td>
+                                        <td>CON</td>
+                                        <td>03:03 p. m.</td>
+                                        <td><i class="icon-no-notificada red"></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td>01:03 p. m.</td>
+                                        <td><i class="icon-servicios-autorizados_ultrasonido"></i> US</td>
+                                        <td>TEP</td>
+                                        <td>03:03 p. m.</td>
+                                        <td>20</td>
+                                    </tr>
+                                    <tr>
+                                        <td>01:03 p. m.</td>
+                                        <td><i class="icon-servicios-autorizados_ultrasonido"></i> US</td>
+                                        <td>CON</td>
+                                        <td>03:03 p. m.</td>
+                                        <td>20</td>
+                                    </tr>
+                                    <tr>
+                                        <td>01:03 p. m.</td>
+                                        <td><i class="icon-servicios-autorizados_ultrasonido"></i> US</td>
+                                        <td>TAP</td>
+                                        <td>03:03 p. m.</td>
+                                        <td>20</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Monterrey</td>
+                                        <td><i class="icon-servicios-autorizados_ultrasonido"></i> US</td>
+                                        <td>CON</td>
+                                        <td>03:03 p. m.</td>
+                                        <td>20</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Monterrey</td>
+                                        <td><i class="icon-servicios-autorizados_ultrasonido"></i> US</td>
+                                        <td>TAP</td>
+                                        <td>03:03 p. m.</td>
+                                        <td>20</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Monterrey</td>
+                                        <td><i class="icon-servicios-autorizados_ultrasonido"></i> US</td>
+                                        <td>TEP</td>
+                                        <td>03:03 p. m.</td>
+                                        <td>20</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Monterrey</td>
+                                        <td><i class="icon-servicios-autorizados_ultrasonido"></i> US</td>
+                                        <td>CON</td>
+                                        <td>03:03 p. m.</td>
+                                        <td>20</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Monterrey</td>
+                                        <td><i class="icon-servicios-autorizados_ultrasonido"></i> US</td>
+                                        <td>CON</td>
+                                        <td>03:03 p. m.</td>
+                                        <td>20</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Monterrey</td>
+                                        <td><i class="icon-servicios-autorizados_ultrasonido"></i> US</td>
+                                        <td>TAP</td>
+                                        <td>03:03 p. m.</td>
+                                        <td>20</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Monterrey</td>
+                                        <td><i class="icon-servicios-autorizados_ultrasonido"></i> US</td>
+                                        <td>CON</td>
+                                        <td>03:03 p. m.</td>
+                                        <td>20</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Monterrey</td>
+                                        <td><i class="icon-servicios-autorizados_ultrasonido"></i> US</td>
+                                        <td>CON</td>
+                                        <td>03:03 p. m.</td>
+                                        <td><i class="icon-no-notificada red"></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Monterrey</td>
+                                        <td><i class="icon-servicios-autorizados_ultrasonido"></i> US</td>
+                                        <td>CON</td>
+                                        <td>03:03 p. m.</td>
+                                        <td><i class="icon-no-notificada red"></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Monterrey</td>
+                                        <td><i class="icon-servicios-autorizados_ultrasonido"></i> US</td>
+                                        <td>CON</td>
+                                        <td>03:03 p. m.</td>
+                                        <td><i class="icon-no-notificada red"></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Monterrey</td>
+                                        <td><i class="icon-servicios-autorizados_ultrasonido"></i> US</td>
+                                        <td>CON</td>
+                                        <td>03:03 p. m.</td>
+                                        <td><i class="icon-no-notificada red"></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Monterrey</td>
+                                        <td><i class="icon-servicios-autorizados_ultrasonido"></i> US</td>
+                                        <td>CON</td>
+                                        <td>03:03 p. m.</td>
+                                        <td><i class="icon-no-notificada red"></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Monterrey</td>
+                                        <td><i class="icon-servicios-autorizados_ultrasonido"></i> US</td>
+                                        <td>CON</td>
+                                        <td>03:03 p. m.</td>
+                                        <td><i class="icon-no-notificada red"></i></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 pd-lt-10">
+                <div class="tab-graphs">
+                    <div class="row">
+                        <div class="col-sm-6 pd-der-0">
+                            <div class="panel-graphs">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="alert-graph-title">
+                                            <i class="icon-tep"></i> <span>TEP</span>
+                                        </div>
+                                        <div class="alert-graph-body">
+                                            <ul>
+                                                <li><div class="mark-circle orange"></div></li>
+                                                <li><span>Visualizados</span></li>
+                                                <li><span class="indicator-panel">25%</span></li>
+                                            </ul>
+                                            <ul>
+                                                <li><div class="mark-circle green"></div></li>
+                                                <li><span>Notificados</span></li>
+                                                <li><span class="indicator-panel">25%</span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="images">
+                                            <img src="images/graph.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 pd-iz-0">
+                            <div class="panel-graphs">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="alert-graph-title">
+                                            <i class="icon-tenp"></i> <span>TENP</span>
+                                        </div>
+                                        <div class="alert-graph-body">
+                                            <ul>
+                                                <li><div class="mark-circle orange"></div></li>
+                                                <li><span>Visualizados</span></li>
+                                                <li><span class="indicator-panel">25%</span></li>
+                                            </ul>
+                                            <ul>
+                                                <li><div class="mark-circle green"></div></li>
+                                                <li><span>Notificados</span></li>
+                                                <li><span class="indicator-panel">25%</span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="images">
+                                            <img src="images/graph.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6 pd-der-0">
+                            <div class="panel-graphs">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="alert-graph-title">
+                                            <i class="icon-consultorios-apagados"></i> <span>CON-OFF</span>
+                                        </div>
+                                        <div class="alert-graph-body">
+                                            <ul>
+                                                <li><div class="mark-circle orange"></div></li>
+                                                <li><span>Visualizados</span></li>
+                                                <li><span class="indicator-panel">25%</span></li>
+                                            </ul>
+                                            <ul>
+                                                <li><div class="mark-circle green"></div></li>
+                                                <li><span>Notificados</span></li>
+                                                <li><span class="indicator-panel">25%</span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="images">
+                                            <img src="images/graph.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 pd-iz-0">
+                            <div class="panel-graphs">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="alert-graph-title">
+                                            <i class="icon-capacidad"></i> <span>CAP</span>
+                                        </div>
+                                        <div class="alert-graph-body">
+                                            <ul>
+                                                <li><div class="mark-circle orange"></div></li>
+                                                <li><span>Visualizados</span></li>
+                                                <li><span class="indicator-panel">25%</span></li>
+                                            </ul>
+                                            <ul>
+                                                <li><div class="mark-circle green"></div></li>
+                                                <li><span>Notificados</span></li>
+                                                <li><span class="indicator-panel">25%</span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="images">
+                                            <img src="images/graph.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6 pd-der-0">
+                            <div class="panel-graphs">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="alert-graph-title">
+                                            <i class="icon-tap"></i> <span>TAP</span> <i class="icon-flecha-arriba"></i>
+                                        </div>
+                                        <div class="alert-graph-body">
+                                            <ul>
+                                                <li><div class="mark-circle orange"></div></li>
+                                                <li><span>Visualizados</span></li>
+                                                <li><span class="indicator-panel">25%</span></li>
+                                            </ul>
+                                            <ul>
+                                                <li><div class="mark-circle green"></div></li>
+                                                <li><span>Notificados</span></li>
+                                                <li><span class="indicator-panel">25%</span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="images">
+                                            <img src="images/graph.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 pd-iz-0">
+                            <div class="panel-graphs">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="alert-graph-title">
+                                            <i class="icon-tap"></i> <span>TAP</span> <i class="icon-flecha-abajo"></i>
+                                        </div>
+                                        <div class="alert-graph-body">
+                                            <ul>
+                                                <li><div class="mark-circle orange"></div></li>
+                                                <li><span>Visualizados</span></li>
+                                                <li><span class="indicator-panel">25%</span></li>
+                                            </ul>
+                                            <ul>
+                                                <li><div class="mark-circle green"></div></li>
+                                                <li><span>Notificados</span></li>
+                                                <li><span class="indicator-panel">25%</span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="images">
+                                            <img src="images/graph.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6 pd-der-0">
+                            <div class="panel-graphs">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="alert-graph-title">
+                                            <i class="icon-ausentismo"></i> <span>AUS</span>
+                                        </div>
+                                        <div class="alert-graph-body">
+                                            <ul>
+                                                <li><div class="mark-circle orange"></div></li>
+                                                <li><span>Visualizados</span></li>
+                                                <li><span class="indicator-panel">25%</span></li>
+                                            </ul>
+                                            <ul>
+                                                <li><div class="mark-circle green"></div></li>
+                                                <li><span>Notificados</span></li>
+                                                <li><span class="indicator-panel">25%</span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="images">
+                                            <img src="images/graph.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 pd-iz-0">
+                            <div class="panel-graphs">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="alert-graph-title">
+                                            <i class="icon-inactividad"></i> <span>INA</span>
+                                        </div>
+                                        <div class="alert-graph-body">
+                                            <ul>
+                                                <li><div class="mark-circle orange"></div></li>
+                                                <li><span>Visualizados</span></li>
+                                                <li><span class="indicator-panel">25%</span></li>
+                                            </ul>
+                                            <ul>
+                                                <li><div class="mark-circle green"></div></li>
+                                                <li><span>Notificados</span></li>
+                                                <li><span class="indicator-panel">25%</span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="images">
+                                            <img src="images/graph.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6 pd-der-0">
+                            <div class="panel-graphs">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="alert-graph-title">
+                                            <i class="icon-tep"></i> <span>TEP</span>
+                                        </div>
+                                        <div class="alert-graph-body">
+                                            <ul>
+                                                <li><div class="mark-circle orange"></div></li>
+                                                <li><span>Visualizados</span></li>
+                                                <li><span class="indicator-panel">25%</span></li>
+                                            </ul>
+                                            <ul>
+                                                <li><div class="mark-circle green"></div></li>
+                                                <li><span>Notificados</span></li>
+                                                <li><span class="indicator-panel">25%</span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="images">
+                                            <img src="images/graph.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 pd-iz-0">
+                            <div class="panel-graphs">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="alert-graph-title">
+                                            <i class="icon-tep"></i> <span>TEP</span>
+                                        </div>
+                                        <div class="alert-graph-body">
+                                            <ul>
+                                                <li><div class="mark-circle orange"></div></li>
+                                                <li><span>Visualizados</span></li>
+                                                <li><span class="indicator-panel">25%</span></li>
+                                            </ul>
+                                            <ul>
+                                                <li><div class="mark-circle green"></div></li>
+                                                <li><span>Notificados</span></li>
+                                                <li><span class="indicator-panel">25%</span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="images">
+                                            <img src="images/graph.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="js/jquery.easypiechart.min.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="js/monitoreo.js"></script>
+    <script type="text/javascript">
+            $(function () {
+                $('#datetimepicker4').datetimepicker();
+            });
+    </script>
+</body>
+</html>

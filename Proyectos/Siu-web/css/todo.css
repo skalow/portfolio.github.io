@@ -1,0 +1,282 @@
+.fondo {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-color: #5BBCBC; }
+
+a {
+  text-decoration: none; }
+
+.background {
+  position: relative;
+  top: 37vh;
+  left: 33vw;
+  background-color: #fff;
+  width: 570px;
+  height: 270px;
+  color: #5BBCBC;
+  border-radius: 30px;
+  box-shadow: -8px 8px 15px #00000026; }
+  .background .icon-hi img {
+    position: relative;
+    left: 260px;
+    top: 45px;
+    width: 50px;
+    animation-name: icon-hi-animation;
+    animation-duration: 4s;
+    animation-iteration-count: infinite; }
+  .background .welcome span {
+    font-size: 32px;
+    position: relative;
+    top: 70px;
+    left: 100px;
+    letter-spacing: 2px;
+    animation-name: slide-welcome;
+    animation-duration: 1s; }
+  .background .comenzar {
+    cursor: pointer;
+    position: relative;
+    left: 226px;
+    top: 95px;
+    background-color: #E75280;
+    box-shadow: 0px 0px 16px rgba(255, 0, 78, 0.38);
+    color: #fff;
+    width: 120px;
+    height: 30px;
+    border-radius: 20px;
+    border: 1px solid #ffffffe0;
+    animation-name: slide-comenzar;
+    animation-duration: 1.5s;
+    transition: .3s; }
+    .background .comenzar span {
+      position: relative;
+      top: 7px;
+      left: 15px; }
+
+@font-face {
+  font-family: "gotham-light";
+  src: url("../CSS/fonts/Gotham-Light.otf"); }
+.body {
+  margin: 0;
+  padding: 0;
+  font-family: "gotham-light"; }
+
+.informacion {
+  margin: 0 auto;
+  width: 80vw;
+  height: 50px; }
+  .informacion ul {
+    margin-top: 0;
+    padding: 0; }
+    .informacion ul li {
+      margin-top: 14px;
+      display: inline-block;
+      font-size: 14px;
+      padding-right: 40px; }
+
+.next {
+  position: relative;
+  background-color: #5BBCBC;
+  text-align: left;
+  left: 340px;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  border-top-right-radius: 20%;
+  transform: rotate(30deg) skewX(-30deg) scale(1, 0.866); }
+  .next.navigation {
+    opacity: 0;
+    transition: .3s;
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    left: -4px;
+    top: -2px;
+    transform: rotate(75deg) skewX(-30deg) scale(1, 0.866); }
+    .next.navigation::after {
+      width: 15px;
+      height: 15px; }
+    .next.navigation::before {
+      width: 15px;
+      height: 15px; }
+  .next::before {
+    content: '';
+    position: absolute;
+    background-color: inherit;
+    width: 30px;
+    height: 30px;
+    border-top-right-radius: 20%;
+    transform: rotate(-135deg) skewX(-45deg) scale(1.414, 0.707) translate(0, -50%); }
+  .next::after {
+    content: '';
+    position: absolute;
+    background-color: inherit;
+    width: 30px;
+    height: 30px;
+    border-top-right-radius: 20%;
+    transform: rotate(135deg) skewY(-45deg) scale(0.707, 1.414) translate(50%); }
+
+.header {
+  max-width: 80vw;
+  height: 200px;
+  background-color: #EDEDED;
+  margin: 0 auto;
+  position: relative; }
+  .header .mastografia {
+    position: relative;
+    max-width: 1450px;
+    height: 100%;
+    display: grid;
+    color: #FFF;
+    margin: 0 auto;
+    grid-gap: .2rem;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 100%;
+    grid-template-areas: "es-1 es-2 es-3 es-4 es-5 es-6"; }
+    .header .mastografia .estudio {
+      position: relative;
+      width: 110px;
+      height: 110px;
+      padding: 10px;
+      top: 17%;
+      left: 27%;
+      transition: .3s;
+      border-radius: 50%;
+      transform: rotate(-45deg);
+      border-top: 4px solid #E75280;
+      border-right: 4px solid #E75280;
+      border-bottom: 4px solid #5BBCBC;
+      border-left: 4px solid #5BBCBC; }
+      .header .mastografia .estudio img {
+        transform: rotate(45deg); }
+      .header .mastografia .estudio:hover {
+        transform: scale(1.1) rotate(-45deg);
+        transition: .3s; }
+  .header .punto-revision {
+    max-width: 80vw;
+    height: 70px;
+    margin: 0 auto;
+    background-color: #E75280;
+    position: relative; }
+    .header .punto-revision div {
+      text-align: center;
+      color: #FFF;
+      font-size: 24px;
+      position: relative;
+      top: 20px;
+      font-weight: bold; }
+  .header .lado-mama {
+    width: 60px;
+    height: -webkit-calc(100% + 70px);
+    background-color: #5BBCBC;
+    position: absolute;
+    right: 0;
+    top: 0; }
+    .header .lado-mama div {
+      color: #FFF;
+      transform: rotate(-90deg);
+      position: absolute;
+      bottom: 125px;
+      left: -40px;
+      white-space: nowrap;
+      font-weight: bold; }
+
+.estudio-body {
+  width: 80vw;
+  height: 600px;
+  margin: 0 auto; }
+  .estudio-body .cards {
+    position: relative;
+    top: 220px;
+    margin: 0 auto;
+    width: 805px; }
+    .estudio-body .cards .card-individual {
+      position: relative;
+      margin: 0 50px 0 50px;
+      display: inline-block;
+      width: 300px;
+      height: 300px;
+      background-color: #EDEDED;
+      border-radius: 20px;
+      white-space: nowrap;
+      box-shadow: 6px 6px 9px #80808059; }
+      .estudio-body .cards .card-individual .numero-opcion {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: #5BBCBC;
+        position: absolute;
+        text-align: center;
+        line-height: 30px;
+        left: 15px;
+        top: 15px;
+        color: #fff; }
+      .estudio-body .cards .card-individual .card-respuesta {
+        text-align: center;
+        color: #E75280;
+        position: relative;
+        top: 100px; }
+      .estudio-body .cards .card-individual .card-respuesta::before {
+        content: "";
+        width: 50%;
+        height: 2px;
+        background-color: #5BBCBC;
+        position: absolute;
+        top: 50px;
+        left: 25%; }
+      .estudio-body .cards .card-individual .selecc {
+        position: absolute;
+        top: 190px;
+        text-align: center;
+        width: 300px;
+        font-size: 16px; }
+
+@keyframes icon-hi-animation {
+  0% {
+    top: 40px;
+    transform: rotate(-15deg); }
+  20% {
+    top: 50px; }
+  60% {
+    top: 40px;
+    transform: rotate(15deg); }
+  80% {
+    top: 50px;
+    transform: rotate(0deg); }
+  100% {
+    top: 40px;
+    transform: rotate(-15deg); } }
+@keyframes slide-welcome {
+  0% {
+    top: 200px;
+    opacity: 0; }
+  100% {
+    top: 70px; } }
+@keyframes slide-comenzar {
+  0% {
+    top: 200px;
+    opacity: 0; }
+  50% {
+    top: 150px;
+    opacity: 0; }
+  100% {
+    top: 95px; } }
+.triangle-indicate {
+  opacity: 1 !important;
+  transition: .3s;
+  animation: triangle-indicate;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite; }
+
+@keyframes triangle-indicate {
+  0% {
+    left: -4px;
+    top: -2px; }
+  50% {
+    left: -17px;
+    top: -19px; }
+  100% {
+    left: -4px;
+    top: -2px; } }
+
+/*# sourceMappingURL=todo.css.map */
