@@ -1,0 +1,773 @@
+/*Golem*/
+
+.highcharts-axis-labels {
+    fill: white !important;
+}
+
+.highcharts-grid-line {
+    fill: none;
+    stroke: #4f4f4f !important;
+}
+
+.highcharts-axis-line {
+    stroke: #4f4f4f !important;
+}
+
+.porcentajeInterno {
+    display: block;
+    padding: 22px;
+    color: white !important;
+}
+
+.highcharts-root{
+    text {
+        stroke-width: 0;
+        fill: white !important;
+    }
+}
+
+.highcharts-tooltip{
+    text {
+        fill: black !important;
+    }
+}
+
+.datos{
+    h3{
+        display:block;
+        width:100%;
+        font-size:14px !important;
+    }
+}
+
+.dropdown-menu {
+    background: #1a1a1a !important;
+    a {
+        color: #bdc3c7 !important;
+    }
+}
+
+.percent {
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 225px;
+}
+
+#porcentajeTAP,
+#porcentajeTEP,
+#porcentajeCON,
+#porcentajeTENP {
+    font-weight: bold;
+    font-size: 35px;
+}
+
+#porcentajeTAP,
+#porcentajeCON {
+    width:100%;
+    text-align:center;
+    color: $verde-secondary;
+}
+
+.porcentajeRojo {
+    font-size: 40px !important;
+    color: $rojo !important;
+}
+
+.porcentajeNaranja {
+    font-size: 37px !important;
+    color: $naranja !important;
+}
+
+.percentInterno {
+    position: absolute;
+    top: 30px;
+    font-size: 30px;
+    color: white;
+    display: block;
+    width: 100px;
+    text-align: center;
+}
+
+
+.circle{
+    span{
+        width:40px;
+        text-align:center;
+    }
+}
+
+.chart {
+    width: 200px;
+    height: 200px;
+    left: calc(50% - 100px);
+}
+
+.card{
+    .card-body{
+        .grafica {
+            width: 100%;
+            height: 265px;
+            /*margin-bottom:20px;*/
+        }
+    }
+}
+
+.chart{
+    canvas {
+        top: 20px;
+    }
+}
+
+
+#tablaTepActual.three-row th:nth-child(2),
+#tablaTepActual.three-row td:nth-child(2),
+#tablaTepActual.three-row th:nth-child(5),
+#tablaTepActual.three-row td:nth-child(5) {
+    display: none;
+}
+
+#tablaTepActual{
+    &.table-fixed{
+        &.semanal{
+            th:nth-child(1),td:nth-child(1){
+                width: 462px !important;
+                text-align: left;
+            }
+            th:nth-child(3),td:nth-child(3){
+                width: 231.5px !important;
+            }
+            th:nth-child(4),td:nth-child(4){
+                width: 231.5px !important;
+            }
+        }
+    }
+}
+
+/*#tablaTenpActual.table-fixed td:nth-child(5),
+#tablaTenpActual.table-fixed th:nth-child(5) {
+    width: 231.5px !important;
+}
+
+#tablaTenpActual.table-fixed td:nth-child(6),
+#tablaTenpActual.table-fixed th:nth-child(6) {
+    width: 231.5px !important;
+}
+
+#tablaTepActual.table-fixed td:nth-child(7),
+#tablaTepActual.table-fixed th:nth-child(7) {
+    width: 231.5px !important;
+}*/
+
+
+.content-load {
+    width: 500px;
+    height: 500px;
+    background-color: antiquewhite;
+}
+
+.loader {
+    top: 400px;
+    color: #177bbb;
+    font-size: 30px;
+    margin: 60px auto;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    position: relative;
+    text-indent: -9999em;
+    -webkit-animation: load4 1.3s infinite linear;
+    animation: load4 1.3s infinite linear;
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0);
+}
+
+@-webkit-keyframes load4 {
+    0%, 100% {
+        box-shadow: 0 -3em 0 0.2em, 2em -2em 0 0em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 0;
+    }
+
+    12.5% {
+        box-shadow: 0 -3em 0 0, 2em -2em 0 0.2em, 3em 0 0 0, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 -1em;
+    }
+
+    25% {
+        box-shadow: 0 -3em 0 -0.5em, 2em -2em 0 0, 3em 0 0 0.2em, 2em 2em 0 0, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 -1em;
+    }
+
+    37.5% {
+        box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0em 0 0, 2em 2em 0 0.2em, 0 3em 0 0em, -2em 2em 0 -1em, -3em 0em 0 -1em, -2em -2em 0 -1em;
+    }
+
+    50% {
+        box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 0em, 0 3em 0 0.2em, -2em 2em 0 0, -3em 0em 0 -1em, -2em -2em 0 -1em;
+    }
+
+    62.5% {
+        box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 0, -2em 2em 0 0.2em, -3em 0 0 0, -2em -2em 0 -1em;
+    }
+
+    75% {
+        box-shadow: 0em -3em 0 -1em, 2em -2em 0 -1em, 3em 0em 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 0, -3em 0em 0 0.2em, -2em -2em 0 0;
+    }
+
+    87.5% {
+        box-shadow: 0em -3em 0 0, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 0, -3em 0em 0 0, -2em -2em 0 0.2em;
+    }
+}
+#tablaTenpActual{
+    &.five-row{
+        th:nth-child(3),td:nth-child(3),th:nth-child(4),td:nth-child(4){
+            display: none;
+        }
+    }
+}
+
+/* Tres columnas expandidas */
+
+.grid{
+    .col-sm-12{
+        .three-row{
+            th:nth-child(1), td:nth-child(1){
+                width: 1000px !important;
+                text-align: left;
+            }
+            th:nth-child(2), td:nth-child(2){
+                width: 460px !important;
+            }
+            th:nth-child(3), td:nth-child(3){
+                width: 460px !important;
+            }
+            th:nth-child(4), td:nth-child(4){
+                width: 460px !important;
+            }
+            th:nth-child(5), td:nth-child(5){
+                width: 460px !important;
+            }
+        }
+        .five-row{
+            th:nth-child(1), td:nth-child(1){
+                width: 1000px !important;
+                transition: all .3s;
+                text-align: left;
+            }
+            th:nth-child(2), td:nth-child(2){
+                width: 230px !important;
+                transition: all .3s;
+            }
+            th:nth-child(3), td:nth-child(3){
+                width: 230px !important;
+                transition: all .3s;
+            }
+            th:nth-child(4), td:nth-child(4){
+                width: 230px !important;
+                transition: all .3s;
+            }
+            th:nth-child(5), td:nth-child(5){
+                width: 230px !important;
+                transition: all .3s;
+            }
+            th:nth-child(6), td:nth-child(6){
+                width: 230px !important;
+                transition: all .3s;
+            }
+            th:nth-child(7), td:nth-child(7){
+                width: 230px !important;
+                transition: all .3s;
+            }
+        }
+    }
+    .col-sm-6{
+        .three-row{
+            th:nth-child(1), td:nth-child(1){
+                width: 500px !important;
+                transition: all .3s;
+                text-align: left;
+            }
+            th:nth-child(2), td:nth-child(2){
+                width: 230px !important;
+                transition: all .3s;
+            }
+            th:nth-child(3), td:nth-child(3){
+                width: 230px !important;
+                transition: all .3s;
+            }
+            th:nth-child(4), td:nth-child(4){
+                width: 230px !important;
+                transition: all .3s;
+            }
+            th:nth-child(5), td:nth-child(5){
+                width: 230px !important;
+                transition: all .3s;
+            }
+        }
+        .five-row{
+            th:nth-child(1), td:nth-child(1){
+                width: 500px !important;
+                transition: all .3s;
+                text-align: left;
+            }
+            th:nth-child(2), td:nth-child(2){
+                width: 115px !important;
+                transition: all .3s;
+            }
+            th:nth-child(3), td:nth-child(3){
+                width: 115px !important;
+                transition: all .3s;
+            }
+            th:nth-child(4), td:nth-child(4){
+                width: 115px !important;
+                transition: all .3s;
+            }
+            th:nth-child(5), td:nth-child(5){
+                width: 115px !important;
+                transition: all .3s;
+            }
+            th:nth-child(6), td:nth-child(6){
+                width: 115px !important;
+                transition: all .3s;
+            }
+            th:nth-child(7), td:nth-child(7){
+                width: 115px !important;
+                transition: all .3s;
+            }
+        }
+        .seven-row{
+            th:nth-child(1), td:nth-child(1){
+                width: 340px !important;
+                transition: all .3s;
+                text-align: left;
+            }
+            th:nth-child(2), td:nth-child(2){
+                width: 90px !important;
+                transition: all .3s;
+            }
+            th:nth-child(3), td:nth-child(3){
+                width: 90px !important;
+                transition: all .3s;
+            }
+            th:nth-child(4), td:nth-child(4){
+                width: 90px !important;
+                transition: all .3s;
+            }
+            th:nth-child(5), td:nth-child(5){
+                width: 90px !important;
+                transition: all .3s;
+            }
+            th:nth-child(6), td:nth-child(6){
+                width: 90px !important;
+                transition: all .3s;
+            }
+            th:nth-child(7), td:nth-child(7){
+                width: 130px !important;
+                transition: all .3s;
+            }
+        }
+    }
+}
+
+/* Fin: Tres columnas expandidas */
+
+/* Tres columnas contraidas */
+
+/* Fin: Tres columnas contraidas */
+
+/* Cinco columnas expandidas */
+
+/* Fin: Cinco columnas expandidas */
+
+/* Cinco columnas contraidas */
+
+/* Fin: Cinco columnas contraidas */
+
+/* Siete columnas expandidas */
+
+/* Fin: Siete columnas expandidas */
+
+/* Cinco Siete contraidas */
+
+/* Fin: Siete columnas contraidas */
+
+.table-fixed{
+    th {
+        cursor: pointer;
+    }
+}
+
+.chartGeneralAlerta{
+    width:50px;
+    height:50px;
+}
+
+.cem-graphs-split {
+    padding: 10px;
+    height: 380px;
+}
+
+span{
+    &.indicator-panel {
+        background-color: rgba(0, 0, 0, 0.863);
+        border: 1px solid gray;
+        border-radius: 5px;
+        padding: 5px;
+        font-size: 12px;
+        margin-left: 10px;
+        text-align: center;
+        color:white;
+        font-weight:normal;
+    }
+}
+
+.tab-alertas{
+    &.extend{
+        .right-tab-body{
+            tr{
+                td{
+                    i{
+                        &.green {
+                            color: $verde;
+                        }
+                        &.red {
+                            color: $rojo;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.select2-container--default{
+    .select2-selection--single{
+        .select2-selection__rendered {
+            color: white;
+            line-height: 28px;
+            background: black;
+        }
+    }
+}
+.select2-container--default{
+    .select2-selection--single {
+        background-color: #fff; 
+        border: 0px solid #aaa !important; 
+        border-radius: 4px; 
+   }
+}
+
+.select2-container--default{
+    .select2-selection--single{
+        .select2-selection__rendered {
+            color: white !important;
+            line-height: 28px;
+        }
+    }
+}
+
+.select2-container--default{
+    .select2-search--dropdown{
+        .select2-search__field {
+            border: 1px solid #ffffff;
+            background: black;
+            color: white;
+        }
+    }
+}
+.select2-search--dropdown {
+    display: block;
+    padding: 4px;
+    background: black;
+}
+.select2-container--default{
+    .select2-results{
+        > .select2-results__options {
+            max-height: 200px;
+            background: black;
+            overflow-y: hidden !important;
+            color: white;
+        }
+    }
+}
+.select2-container--default{
+    .select2-results__option--highlighted[aria-selected] {
+        background-color: white !important;
+        color: black !important;
+    }
+}
+
+.select2-container--default{
+    .select2-results{
+        > .select2-results__options {
+            max-height: 200px;
+            /* overflow-y: auto; */
+            overflow-y: hidden !important;
+        }
+    }
+}
+.selectSucursales{
+    z-index:99;
+    margin-top: 12px; 
+    background: black;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+.notification-ul{
+    height: 150px;
+    overflow-y: scroll;
+    &::-webkit-scrollbar { 
+        height: 15px;
+        width: 10px;
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: #ffffff21;
+    }
+    &::-webkit-scrollbar-thumb:hover {
+        background-color: #ffffff32;
+    }
+    &::-webkit-scrollbar-corner {
+        background: none;
+    }
+}
+
+#tabla-operativa{
+    table{
+        tbody{
+            tr{
+                td{
+                    &.red {
+                        color: $rojo;
+                    }
+                }
+            }
+        }
+    }
+}
+
+table{
+    thead{
+        tr{
+            th{
+                i{
+                    &.sort {
+                        transform: rotate(90deg);
+                        transition: all .2s;
+                        &.rot{
+                            transform: rotate(270deg);
+                            transition: all .2s;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#tabla-tep,
+#tabla-tap {
+    height:90vh;
+}
+
+#tablaTEP{
+    tbody{
+        tr{
+            td{
+                &.red {
+                    color: $rojo;
+                }
+            }
+        }
+    }
+}
+
+#tablaTEP text, #tablaTepAtendidos{
+    text {
+        display: inline-block;
+        min-width: 250px;
+    }
+}
+
+#divContenedorAccesosTEP {
+    max-height: 50vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    width: 80vw;
+    &::-webkit-scrollbar { 
+        height: 15px;
+        width: 10px;
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: #ffffff21;
+    }
+    &::-webkit-scrollbar-thumb:hover {
+        background-color: #ffffff32;
+    }
+    &::-webkit-scrollbar-corner {
+        background: none;
+    }
+}
+    
+#divContenedorTAP {
+    height: 50vh;
+    overflow-y: auto;
+    &::-webkit-scrollbar { 
+        height: 15px;
+        width: 10px;
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: #ffffff21;
+    }
+    &::-webkit-scrollbar-thumb:hover {
+        background-color: #ffffff32;
+    }
+    &::-webkit-scrollbar-corner {
+        background: none;
+    }
+}
+   
+#tablaTAP{
+    tbody{
+        tr{
+            td{
+                &.red{
+                    text{
+                        color: $rojo;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.datepicker{
+    .prev, .next, .switch{
+        color: #CCCCCC;
+        cursor:pointer;
+    }
+}
+
+.datepicker-days{
+    color: #CCCCCC;
+    .day{
+        &.disabled {
+            color: #4C4C4C;
+            text-align: center;
+        }
+        &.enable {
+            font-weight: bold;
+            cursor: pointer;
+            text-align: center;
+        }
+    }
+}
+.datepicker-months, .datepicker-years {
+    color: #CCCCCC;
+}
+
+td{
+    .month{
+        .year{
+            margin:3px;
+        }
+    }
+    &.day{
+        &.enable{
+            &:hover{
+                background: #cacaca;
+                color: black;
+                cursor:pointer;
+            }
+        }
+    }
+    .month{
+        &:hover{
+            background: #cacaca;
+            color: black;
+            cursor:pointer;
+        }
+    }
+    .year{
+        &:hover{
+            background: #cacaca;
+            color: black;
+            cursor:pointer;  
+        }
+    }
+}
+
+#agregarBloqueo {
+    background-color: #353232;
+}
+
+.checkmark{
+    left:30%;
+}
+
+.form-control[disabled]{
+    cursor: not-allowed;
+    background-color: #101010 !important;
+    color: grey;
+}
+fieldset[disabled]{
+    .form-control {
+        cursor: not-allowed;
+        background-color: #101010 !important;
+        color: grey;
+    }
+}
+
+.expandido{
+    #tablaTEP{
+        width: 96vw;
+    }
+}
+
+
+.expandido{
+    #tablaTepAtendidos{
+        width:100%;
+    }
+}
+
+.expandido{
+    #divContenedorAccesosTEP{
+        width:100%;
+    }
+}
+
+.expandido #tabla-alertas{
+    display:none;
+}
+
+#expandir-tep {
+    position: relative;
+    top: 15px;
+    float: right;
+    right: 30px;
+    cursor: pointer;
+}
+
+.table-notif{
+    tr:not(.head){
+        td:nth-child(2) {
+            text-align: center;
+        }
+    }
+}
+
+.trTotales {
+    background: #ffffff1f;
+}
+
+.trTotales{
+    td:first-child{
+        padding-left:21px !important;
+    }
+}
+
+.estudio{
+    &.red {
+        color: $rojo;
+    }
+}

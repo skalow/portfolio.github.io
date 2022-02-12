@@ -1,0 +1,1647 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- fonts de google -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <!-- google icons -->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Animaciones de la pagina -->
+    <link href="css/animaciones.css" rel="stylesheet">
+    <!-- iconos de font-awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <!-- Hoja de estilos nueva -->
+    <link id="estilo" href="css/cem.css" rel="stylesheet">
+    <!--Iconos Nuevos-->
+    <link href="css/fontello.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="header animated slideInDown">
+        <ul>
+            <li>
+                <div id="burguer" class="burguer">
+                    <input type="checkbox" />
+                    <span class="linea-1"></span>
+                    <span class="linea-2"></span>
+                    <span class="linea-3"></span>
+                </div>
+            </li>
+            <li>
+                <img src="images/logo-sd-white.svg">
+            </li>
+        </ul>
+        <div class="areas">
+            <ul>
+                <li>
+                    <label> Area </label>
+                </li>
+                <li id="todos">
+                    <select id="list-drop" class="selected-areas">
+                        <option selected value="0" data-id="0">Todos</option>
+                        <option value="1" data-id="1">Densitometria</option>
+                        <option value="2" data-id="2">Laboratorio</option>
+                        <option value="3" data-id="3">Mastografia</option>
+                        <option value="4" data-id="4">Papanicolaou</option>
+                        <option value="5" data-id="5">Rayos X</option>
+                        <option value="6" data-id="6">Ultrasonido</option>
+                        <option value="9" data-id="9">Electrocardiograma</option>
+                        <option value="11" data-id="11">Tomografia</option>
+                        <option value="12" data-id="12">Resonancia Magnetica</option>
+                        <option value="16" data-id="16">Nutricion</option>
+                        <option value="-2" data-id="-2">Lentes</option>
+                    </select>
+                </li>
+            </ul>
+        </div>
+        <div class="titulo-principal">
+            <h1>Centro de Monitoreo</h1>
+        </div>
+        <div id="switch-color" class="switch-color">
+            <i class="icon-apagado"></i>
+        </div>
+        <i class="material-icons reload" onclick="location.reload();"> replay </i>
+    </nav>
+    <nav id="panel-izq" class="lateral-left animated slideInLeft">
+        <div class="logout">
+            <i class="material-icons"> power_settings_new </i>
+        </div>
+        <div class="lateral-perfil text-center">
+            <img src="images/gustavo.jpg" alt="Profile Picture">
+            <a href="#profile-nav" class="info" data-toggle="collapse" aria-expanded="false">
+                <p class="mnp-name">Gustavo Fring</p>
+                <span class="mnp-desc">Sucursal: </span><span class="mnp-desc">Centro Soporte Institucional</span>
+            </a>
+        </div>
+        <ul class="opciones">
+            <li>
+                <a href="">
+                    <i class="material-icons"> home </i>
+                    <span>inicio</span>
+                    <i class="material-icons drop-option"> arrow_drop_down </i>
+                </a>
+            </li>
+            <li>
+                <a href="../Administracion/Inicio.aspx">
+                    <i class="material-icons"> dashboard </i>
+                    <span>tableros</span>
+                    <i class="material-icons drop-option"> arrow_drop_down </i>
+                </a>
+                <ul class="opciones-1">
+                    <li><a href="../Administracion/IndicadoresCEM.aspx">&nbsp;&nbsp;&nbsp;&nbsp;Indicadores CEM</a></li>
+                    <li></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <!-- ----Wrap de las tablas---- -->
+    <div id="wrapp-panel" class="wrapper-monitoreo ">
+        <div class="row grid ">
+            <!-- ----Tabla Ranking----- -->
+            <div id="tabla-operativa" class="col-sm-12">
+                <div class="wrapp ranking-tabs">
+                    <table class="ranking-tabs">
+                        <thead>
+                            <tr>
+                                <th class="ranking-table-tittle col-sm-2"><i class="material-icons icon-ranking">timeline</i>Ranking</th>
+                                <th class="ranking-table-tittle col-sm-2"></th>
+                                <th class="ranking-table-tittle col-sm-2"></th>
+                                <th class="ranking-table-tittle col-sm-2"></th>
+                                <th class="ranking-table-tittle col-sm-2"></th>
+                                <th class="ranking-table-tittle col-sm-2"></th>
+                            </tr>
+                        </thead>
+                        <thead class="ranking-tab-head">
+                            <tr>
+                                <th class="col3 ranking align-left"> <span> <i class="material-icons">swap_vert</i></span><i class="icon-consultorio"></i> CLÍNICA</th>
+                                <th><span> <i class="material-icons">swap_vert</i></span><i class="icon-tep"></i> TEP</th>
+                                <th><span> <i class="material-icons">swap_vert</i></span><i class="icon-tap"></i> TAP</th>
+                                <th><span> <i class="material-icons">swap_vert</i></span><i class="icon-tenp"></i> TENP</th>
+                                <th><span> <i class="material-icons">swap_vert</i></span><i class="icon-capacidad"></i> CAP</th>
+                                <th><span> <i class="material-icons">swap_vert</i></span><i class="icon-registros"></i> ALERTAS</th>
+                            </tr>
+                        </thead>
+                    </table>
+                    <div class="ranking-tabla">
+                        <table>
+                            <tbody class="ranking-tab-body">
+                                <tr>
+                                    <td id="boton-1" class="col3">IZTAPALAPA CENTRO</td>
+                                    <td>34</td>
+                                    <td>10</td>
+                                    <td>0/3</td>
+                                    <td>20</td>
+                                    <td>10</td>
+                                </tr>
+                                <tr>
+                                    <td>GUADALAJARA AMÉRICAS</td>
+                                    <td>10</td>
+                                    <td>10</td>
+                                    <td>6.2%</td>
+                                    <td>20</td>
+                                    <td>10</td>
+                                </tr>
+                                <tr>
+                                    <td>COYOACÁN</td>
+                                    <td>10</td>
+                                    <td>10</td>
+                                    <td>6.2%</td>
+                                    <td>20</td>
+                                    <td>10</td>
+                                </tr>
+                                <tr>
+                                    <td>SAN LUIS POTOSÍ</td>
+                                    <td>10</td>
+                                    <td>10</td>
+                                    <td>6.2%</td>
+                                    <td>20</td>
+                                    <td>10</td>
+                                </tr>
+                                <tr>
+                                    <td>QUERÉTARO</td>
+                                    <td>10</td>
+                                    <td>10</td>
+                                    <td>6.2%</td>
+                                    <td>20</td>
+                                    <td>10</td>
+                                </tr>
+                                <tr>
+                                    <td>TONALÁ TONALTECAS</td>
+                                    <td>10</td>
+                                    <td>10</td>
+                                    <td>6.2%</td>
+                                    <td>20</td>
+                                    <td>10</td>
+                                </tr>
+                                <tr>
+                                    <td>PUEBLA</td>
+                                    <td>10</td>
+                                    <td>10</td>
+                                    <td>6.2%</td>
+                                    <td>20</td>
+                                    <td>10</td>
+                                </tr>
+                                <tr>
+                                    <td>ECATEPEC</td>
+                                    <td>10</td>
+                                    <td>10</td>
+                                    <td>6.2%</td>
+                                    <td>20</td>
+                                    <td>10</td>
+                                </tr>
+                                <tr>
+                                    <td>ZAPOPAN LAS ÁGUILAS</td>
+                                    <td>10</td>
+                                    <td>10</td>
+                                    <td>6.2%</td>
+                                    <td>20</td>
+                                    <td>10</td>
+                                </tr>
+                                <tr>
+                                    <td>ZTAPALAPA</td>
+                                    <td>10</td>
+                                    <td>10</td>
+                                    <td>6.2%</td>
+                                    <td>20</td>
+                                    <td>10</td>
+                                </tr>
+                                <tr>
+                                    <td>IZTAPALAPA CENTRO</td>
+                                    <td>34</td>
+                                    <td>10</td>
+                                    <td>0/3</td>
+                                    <td>20</td>
+                                    <td>10</td>
+                                </tr>
+                                <tr>
+                                    <td>GUADALAJARA AMÉRICAS</td>
+                                    <td>10</td>
+                                    <td>10</td>
+                                    <td>6.2%</td>
+                                    <td>20</td>
+                                    <td>10</td>
+                                </tr>
+                                <tr>
+                                    <td>COYOACÁN</td>
+                                    <td>10</td>
+                                    <td>10</td>
+                                    <td>6.2%</td>
+                                    <td>20</td>
+                                    <td>10</td>
+                                </tr>
+                                <tr>
+                                    <td>SAN LUIS POTOSÍ</td>
+                                    <td>10</td>
+                                    <td>10</td>
+                                    <td>6.2%</td>
+                                    <td>20</td>
+                                    <td>10</td>
+                                </tr>
+                                <tr>
+                                    <td>QUERÉTARO</td>
+                                    <td>10</td>
+                                    <td>10</td>
+                                    <td>6.2%</td>
+                                    <td>20</td>
+                                    <td>10</td>
+                                </tr>
+                                <tr>
+                                    <td>TONALÁ TONALTECAS</td>
+                                    <td>10</td>
+                                    <td>10</td>
+                                    <td>6.2%</td>
+                                    <td>20</td>
+                                    <td>10</td>
+                                </tr>
+                                <tr>
+                                    <td>PUEBLA</td>
+                                    <td>10</td>
+                                    <td>10</td>
+                                    <td>6.2%</td>
+                                    <td>20</td>
+                                    <td>10</td>
+                                </tr>
+                                <tr>
+                                    <td>ECATEPEC</td>
+                                    <td>10</td>
+                                    <td>10</td>
+                                    <td>6.2%</td>
+                                    <td>20</td>
+                                    <td>10</td>
+                                </tr>
+                                <tr>
+                                    <td>ZAPOPAN LAS ÁGUILAS</td>
+                                    <td>10</td>
+                                    <td>10</td>
+                                    <td>6.2%</td>
+                                    <td>20</td>
+                                    <td>10</td>
+                                </tr>
+                                <tr>
+                                    <td>ZTAPALAPA</td>
+                                    <td>10</td>
+                                    <td>10</td>
+                                    <td>6.2%</td>
+                                    <td>20</td>
+                                    <td>10</td>
+                                </tr>
+                                <tr>
+                                    <td>IZTAPALAPA CENTRO</td>
+                                    <td>34</td>
+                                    <td>10</td>
+                                    <td>0/3</td>
+                                    <td>20</td>
+                                    <td>10</td>
+                                </tr>
+                                <tr>
+                                    <td>GUADALAJARA AMÉRICAS</td>
+                                    <td>10</td>
+                                    <td>10</td>
+                                    <td>6.2%</td>
+                                    <td>20</td>
+                                    <td>10</td>
+                                </tr>
+                                <tr>
+                                    <td>COYOACÁN</td>
+                                    <td>10</td>
+                                    <td>10</td>
+                                    <td>6.2%</td>
+                                    <td>20</td>
+                                    <td>10</td>
+                                </tr>
+                                <tr>
+                                    <td>SAN LUIS POTOSÍ</td>
+                                    <td>10</td>
+                                    <td>10</td>
+                                    <td>6.2%</td>
+                                    <td>20</td>
+                                    <td>10</td>
+                                </tr>
+                                <tr>
+                                    <td>QUERÉTARO</td>
+                                    <td>10</td>
+                                    <td>10</td>
+                                    <td>6.2%</td>
+                                    <td>20</td>
+                                    <td>10</td>
+                                </tr>
+                                <tr>
+                                    <td>TONALÁ TONALTECAS</td>
+                                    <td>10</td>
+                                    <td>10</td>
+                                    <td>6.2%</td>
+                                    <td>20</td>
+                                    <td>10</td>
+                                </tr>
+                                <tr>
+                                    <td>PUEBLA</td>
+                                    <td>10</td>
+                                    <td>10</td>
+                                    <td>6.2%</td>
+                                    <td>20</td>
+                                    <td>10</td>
+                                </tr>
+                                <tr>
+                                    <td>ECATEPEC</td>
+                                    <td>10</td>
+                                    <td>10</td>
+                                    <td>6.2%</td>
+                                    <td>20</td>
+                                    <td>10</td>
+                                </tr>
+                                <tr>
+                                    <td>ZAPOPAN LAS ÁGUILAS</td>
+                                    <td>10</td>
+                                    <td>10</td>
+                                    <td>6.2%</td>
+                                    <td>20</td>
+                                    <td>10</td>
+                                </tr>
+                                <tr>
+                                    <td>ZTAPALAPA</td>
+                                    <td>10</td>
+                                    <td>10</td>
+                                    <td>6.2%</td>
+                                    <td>20</td>
+                                    <td>10</td>
+                                </tr>
+                                <tr>
+                                    <td>IZTAPALAPA CENTRO</td>
+                                    <td>34</td>
+                                    <td>10</td>
+                                    <td>0/3</td>
+                                    <td>20</td>
+                                    <td>10</td>
+                                </tr>
+                                <tr>
+                                    <td>GUADALAJARA AMÉRICAS</td>
+                                    <td>10</td>
+                                    <td>10</td>
+                                    <td>6.2%</td>
+                                    <td>20</td>
+                                    <td>10</td>
+                                </tr>
+                                <tr>
+                                    <td>COYOACÁN</td>
+                                    <td>10</td>
+                                    <td>10</td>
+                                    <td>6.2%</td>
+                                    <td>20</td>
+                                    <td>10</td>
+                                </tr>
+                                <tr>
+                                    <td>SAN LUIS POTOSÍ</td>
+                                    <td>10</td>
+                                    <td>10</td>
+                                    <td>6.2%</td>
+                                    <td>20</td>
+                                    <td>10</td>
+                                </tr>
+                                <tr>
+                                    <td>QUERÉTARO</td>
+                                    <td>10</td>
+                                    <td>10</td>
+                                    <td>6.2%</td>
+                                    <td>20</td>
+                                    <td>10</td>
+                                </tr>
+                                <tr>
+                                    <td>TONALÁ TONALTECAS</td>
+                                    <td>10</td>
+                                    <td>10</td>
+                                    <td>6.2%</td>
+                                    <td>20</td>
+                                    <td>10</td>
+                                </tr>
+                                <tr>
+                                    <td>PUEBLA</td>
+                                    <td>10</td>
+                                    <td>10</td>
+                                    <td>6.2%</td>
+                                    <td>20</td>
+                                    <td>10</td>
+                                </tr>
+                                <tr>
+                                    <td>ECATEPEC</td>
+                                    <td>10</td>
+                                    <td>10</td>
+                                    <td>6.2%</td>
+                                    <td>20</td>
+                                    <td>10</td>
+                                </tr>
+                                <tr>
+                                    <td>ZAPOPAN LAS ÁGUILAS</td>
+                                    <td>10</td>
+                                    <td>10</td>
+                                    <td>6.2%</td>
+                                    <td>20</td>
+                                    <td>10</td>
+                                </tr>
+                                <tr>
+                                    <td>ZTAPALAPA</td>
+                                    <td>10</td>
+                                    <td>10</td>
+                                    <td>6.2%</td>
+                                    <td>20</td>
+                                    <td>10</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <!-- ----Tabla Ranking----- -->
+            <!-- ----Tabla TEP----- -->
+            <div id="tabla-tep" class="col-sm-6 wrapp ocultar">
+                <div id="close-tep" class="close-icon"><i class="material-icons">clear</i></div>
+                <div class="print"><i class="material-icons">print</i></div>
+
+                <div class="left-tabs-wrapp scroll-horizontal">
+                    <div class="left-table-tittle">
+                        <span>General <i class="icon-general"></i></span>
+                    </div>
+                    <table class="left-tabs">
+                        <thead class="table-head">
+                            <tr>
+                                <th>Descripción</th>
+                                <th>6-7</th>
+                                <th>7-8</th>
+                                <th>8-9</th>
+                                <th>9-10</th>
+                                <th>10-11</th>
+                                <th>11-12</th>
+                                <th>12-13</th>
+                                <th>13-14</th>
+                                <th>14-15</th>
+                                <th>15-16</th>
+                                <th>16-17</th>
+                                <th>17-18</th>
+                                <th>18-19</th>
+                                <th>19-20</th>
+                                <th>Total</th>
+                            </tr>
+                        </thead>
+                        <tbody class="table-body">
+                            <tr>
+                                <td><i class="icon-registros"></i>Registros</td>
+                                <td>10 </td>
+                                <td>10</td>
+                                <td>0/3</td>
+                                <td>20</td>
+                                <td>10</td>
+                                <td>10</td>
+                                <td>0/3</td>
+                                <td>20</td>
+                                <td>10</td>
+                                <td>10</td>
+                                <td>0/3</td>
+                                <td>20</td>
+                                <td>10</td>
+                                <td>10</td>
+                                <td>0/3</td>
+                            </tr>
+                            <tr>
+                                <td><i class="icon-estudios-vencidos-no-recepcionados"></i>Vencidos</td>
+                                <td>10</td>
+                                <td>10</td>
+                                <td>6.2%</td>
+                                <td>20</td>
+                                <td>10</td>
+                                <td>10</td>
+                                <td>6.2%</td>
+                                <td>20</td>
+                                <td>10</td>
+                                <td>10</td>
+                                <td>6.2%</td>
+                                <td>20</td>
+                                <td>10</td>
+                                <td>10</td>
+                                <td>6.2%</td>
+                            </tr>
+                            <tr>
+                                <td><i class="icon-consultorio"></i>C. Programados</td>
+                                <td>10</td>
+                                <td>10</td>
+                                <td>6.2%</td>
+                                <td>20</td>
+                                <td>10</td>
+                                <td>10</td>
+                                <td>6.2%</td>
+                                <td>20</td>
+                                <td>10</td>
+                                <td>10</td>
+                                <td>6.2%</td>
+                                <td>20</td>
+                                <td>10</td>
+                                <td>10</td>
+                                <td>6.2%</td>
+                            </tr>
+                            <tr>
+                                <td><i class="icon-capacidad"></i>Capacidad</td>
+                                <td>10</td>
+                                <td>10</td>
+                                <td>6.2%</td>
+                                <td>20</td>
+                                <td>10</td>
+                                <td>10</td>
+                                <td>6.2%</td>
+                                <td>20</td>
+                                <td>10</td>
+                                <td>10</td>
+                                <td>6.2%</td>
+                                <td>20</td>
+                                <td>10</td>
+                                <td>10</td>
+                                <td>6.2%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="left-tabs col-18">
+                        <div class="left-table-tittle">
+                            <span>Atendidos <i class="icon-atendidos"></i></span>
+                        </div>
+                        <thead class="table-head">
+                            <tr>
+                                <th>Descripción</th>
+                                <th>6-7</th>
+                                <th>7-8</th>
+                                <th>8-9</th>
+                                <th>9-10</th>
+                                <th>10-11</th>
+                                <th>11-12</th>
+                                <th>12-13</th>
+                                <th>13-14</th>
+                                <th>14-15</th>
+                                <th>15-16</th>
+                                <th>16-17</th>
+                                <th>17-18</th>
+                                <th>18-19</th>
+                                <th>19-20</th>
+                                <th>TOTAL</th>
+                            </tr>
+                        </thead>
+                        <tbody class="table-body">
+                            <tr class="toolt">
+                                <td><i class="icon-nombre-del-colaborador"></i> Xiomara García <span><i class="icon-consultorio"></i>1 / 10:00 - 14:00</span></td>
+                                <td><div><i class="material-icons indicador"> power_settings_new </i> 8:10 - 8:20</div> <span>45 min</span> 10<i class="icon-ausentismo red-icon"> </i></i></td>
+                                <td><span>12 min</span>10<i class="icon-ausentismo red-icon"></i></td>
+                                <td><span>20 min</span>0/3</td>
+                                <td><span>20 min</span>20<i class="icon-ausentismo red-icon"> </i></td>
+                                <td><span>20 min</span>10</td>
+                                <td><span>20 min</span>10</td>
+                                <td><span>20 min</span>0/3</td>
+                                <td><span>20 min</span>20</td>
+                                <td><span>20 min</span>10<i class="icon-ausentismo red-icon"></i></td>
+                                <td><span>20 min</span>10</td>
+                                <td><span>20 min</span>0/3<i class="icon-ausentismo red-icon"></i></td>
+                                <td><span>20 min</span>20<i class="icon-ausentismo red-icon">  </i></td>
+                                <td><span>20 min</span>10</td>
+                                <td><span>20 min</span>20<i class="icon-ausentismo red-icon"> </i></td>
+                                <td><span>20 min</span>10</td>
+                            </tr>
+                            <tr class="toolt">
+                                <td><i class="icon-nombre-del-colaborador"></i>Xiomara García <span><i class="icon-consultorio"></i>1 / 10:00 - 14:00</span></td>
+                                <td>10</td>
+                                <td>10</td>
+                                <td>6.2%</td>
+                                <td>20</td>
+                                <td>10</td>
+                                <td>10</td>
+                                <td>6.2%</td>
+                                <td>20</td>
+                                <td>10</td>
+                                <td>10</td>
+                                <td>6.2%</td>
+                                <td>20</td>
+                                <td>10</td>
+                                <td>10</td>
+                                <td>6.2%</td>
+                            </tr>
+                            <tr class="toolt">
+                                <td><i class="icon-nombre-del-colaborador"></i>Xiomara García <span><i class="icon-consultorio"></i>1 / 10:00 - 14:00</span></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr class="toolt">
+                                <td><i class="icon-nombre-del-colaborador"></i>Xiomara García <span><i class="icon-consultorio"></i>1 / 10:00 - 14:00</span></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr class="toolt">
+                                <td><i class="icon-nombre-del-colaborador"></i>Xiomara García <span><i class="icon-consultorio"></i>1 / 10:00 - 14:00</span></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr class="toolt">
+                                <td><i class="icon-nombre-del-colaborador"></i>Xiomara García <span><i class="icon-consultorio"></i>1 / 10:00 - 14:00</span></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr class="toolt">
+                                <td><i class="icon-nombre-del-colaborador"></i>Xiomara García <span><i class="icon-consultorio"></i>1 / 10:00 - 14:00</span></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr class="toolt">
+                                <td><i class="icon-nombre-del-colaborador"></i>Xiomara García <span><i class="icon-consultorio"></i>1 / 10:00 - 14:00</span></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr class="toolt">
+                                <td><i class="icon-nombre-del-colaborador"></i>Xiomara García <span><i class="icon-consultorio"></i>1 / 10:00 - 14:00</span></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr class="toolt">
+                                <td><i class="icon-nombre-del-colaborador"></i>Xiomara García <span><i class="icon-consultorio"></i>1 / 10:00 - 14:00</span></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr class="toolt">
+                                <td><i class="icon-nombre-del-colaborador"></i>Xiomara García <span><i class="icon-consultorio"></i>1 / 10:00 - 14:00</span></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr class="toolt">
+                                <td><i class="icon-nombre-del-colaborador"></i>Xiomara García <span><i class="icon-consultorio"></i>1 / 10:00 - 14:00</span></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr class="toolt">
+                                <td><i class="icon-nombre-del-colaborador"></i>Xiomara García <span><i class="icon-consultorio"></i>1 / 10:00 - 14:00</span></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr class="toolt">
+                                <td><i class="icon-nombre-del-colaborador"></i>Xiomara García <span><i class="icon-consultorio"></i>1 / 10:00 - 14:00</span></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr class="toolt">
+                                <td><i class="icon-nombre-del-colaborador"></i>Xiomara García <span><i class="icon-consultorio"></i>1 / 10:00 - 14:00</span></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="table-tittle">
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+            <!-- ----Tabla TEP----- -->
+            <!-- ----Tabla TAP----- -->
+            <div id="tabla-tap" class="col-sm-6 wrapp ocultar">
+                <div id="close-tap" class="close-icon"><i class="material-icons">clear</i></div>
+                <div class="print"><i class="material-icons">print</i></div>
+
+                <div class="tap-tabs-wrapp ">
+                    <table class="left-tabs tap-body">
+                        <div class="left-table-tittle">
+                            <span>Atendidos<i class="icon-atendidos"></i></span>
+                        </div>
+                        <thead class="table-head">
+                            <tr>
+                                <th>Descripción</th>
+                                <th>TOTAL</th>
+                                <th>+TO</th>
+                                <th>%+TO</th>
+                                <th>-TO</th>
+                                <th>%-TO</th>
+                                <th>TAP</th>
+                            </tr>
+                        </thead>
+                        <tbody class="table-body">
+                            <tr class="toolt toolt-tap">
+                                <td><i class="icon-nombre-del-colaborador"></i> Xiomara García <span><i class="icon-consultorio"></i>1 / 10:00 - 14:00</span></td>
+                                <td>30</td>
+                                <td>20</td>
+                                <td>10</td>
+                                <td>10</td>
+                                <td>10</td>
+                                <td>10</td>
+                            </tr>
+                            <tr class="toolt toolt-tap">
+                                <td><i class="icon-nombre-del-colaborador"></i>Xiomara García <span><i class="icon-consultorio"></i>1 / 10:00 - 14:00</span></td>
+                                <td>22</td>
+                                <td>20</td>
+                                <td>10</td>
+                                <td>10</td>
+                                <td>10</td>
+                                <td>10</td>
+                            </tr>
+                            <tr class="toolt toolt-tap">
+                                <td><i class="icon-nombre-del-colaborador"></i>Xiomara García <span><i class="icon-consultorio"></i>1 / 10:00 - 14:00</span></td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                            </tr>
+                            <tr class="toolt toolt-tap">
+                                <td><i class="icon-nombre-del-colaborador"></i>Xiomara García <span><i class="icon-consultorio"></i>1 / 10:00 - 14:00</span></td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>10</td>
+                                <td>10</td>
+                                <td>10</td>
+                            </tr>
+                            <tr class="toolt toolt-tap">
+                                <td><i class="icon-nombre-del-colaborador"></i>Xiomara García <span><i class="icon-consultorio"></i>1 / 10:00 - 14:00</span></td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                            </tr>
+                            <tr class="toolt toolt-tap">
+                                <td><i class="icon-nombre-del-colaborador"></i>Xiomara García <span><i class="icon-consultorio"></i>1 / 10:00 - 14:00</span></td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td><span>20 min</span>10</td>
+                                <td><span>20 min</span>10</td>
+                                <td><span>20 min</span>10</td>
+                            </tr>
+                            <tr class="toolt toolt-tap">
+                                <td><i class="icon-nombre-del-colaborador"></i>Xiomara García <span><i class="icon-consultorio"></i>1 / 10:00 - 14:00</span></td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>10</td>
+                                <td>10</td>
+                                <td>10</td>
+                            </tr>
+                            <tr class="toolt toolt-tap">
+                                <td><i class="icon-nombre-del-colaborador"></i>Xiomara García <span><i class="icon-consultorio"></i>1 / 10:00 - 14:00</span></td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>10</td>
+                                <td>10</td>
+                                <td>10</td>
+                            </tr>
+                            <tr class="toolt toolt-tap">
+                                <td><i class="icon-nombre-del-colaborador"></i>Xiomara García <span><i class="icon-consultorio"></i>1 / 10:00 - 14:00</span></td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>10</td>
+                                <td>10</td>
+                                <td>10</td>
+                            </tr>
+                            <tr class="toolt toolt-tap">
+                                <td><i class="icon-nombre-del-colaborador"></i>Xiomara García <span><i class="icon-consultorio"></i>1 / 10:00 - 14:00</span></td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>10</td>
+                                <td>10</td>
+                                <td>10</td>
+                            </tr>
+                            <tr class="toolt toolt-tap">
+                                <td><i class="icon-nombre-del-colaborador"></i>Xiomara García <span><i class="icon-consultorio"></i>1 / 10:00 - 14:00</span></td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>10</td>
+                                <td>10</td>
+                                <td>10</td>
+                            </tr>
+                            <tr class="toolt toolt-tap">
+                                <td>Total</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>10</td>
+                                <td>10</td>
+                                <td>10</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="tap-graph">
+
+                    </div>
+                </div>
+            </div>
+            <!-- ----Tabla TAP----- -->
+            <!-- ----Tabla derecha----- -->
+            <div id="tabla-alertas" class="col-sm-6 ocultar">
+                <div class="wrapp right-tabs">
+                    <table class="right-table-tittle">
+                        <tr>
+                            <th class="col-sm-2">QUERÉTARO TEP</th>
+                            <th class="col-sm-2">TEP 50% <div class="little-ring"></div></th>
+                            <th class="col-sm-2">TAP 53%<div class="little-ring"></div></th>
+                            <th class="col-sm-2">TENP 39%<div class="little-ring"></div></th>
+                            <th id="close-right-tab" class="close-icon icon-area"><i class="material-icons">clear</i></th>
+                        </tr>
+                    </table>
+                    <table>
+                        <thead class="right-tab-head">
+                            <tr>
+                                <th> <span> <i class="material-icons">swap_vert</i></span>ÁREA</th>
+                                <th><span> <i class="material-icons">swap_vert</i></span>TEP</th>
+                                <th><span> <i class="material-icons">swap_vert</i></span>TAP</th>
+                                <th><span> <i class="material-icons">swap_vert</i></span>TENP</th>
+                                <th><span> <i class="material-icons">swap_vert</i></span>CAP</th>
+                                <th><span> <i class="material-icons">swap_vert</i></span>ALERTA</th>
+                            </tr>
+                        </thead>
+                        <tbody class="right-tab-body">
+                            <tr>
+                                <td><i class="icon-servicios-autorizados_lentes"></i>Óptica</td>
+                                <td id="boton-tep">34</td>
+                                <td id="boton-tap">10</td>
+                                <td id="boton-tenp" style="position: relative;">
+                                    0/3
+                                    <div id="table-notif" class="table-notif ocultar">
+                                        <table>
+                                            <thead>
+                                                <tr>
+                                                    <th colspan="3"><i class="material-icons"> print </i> General</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="head">
+                                                    <td><i class="icon-en-tiempo-no-recepcionados"></i>16</td>
+                                                    <td><i class="icon-estudios-vencidos-no-recepcionados"></i>20</td>
+                                                    <td><i class="icon-recepcionados-en-tiempo"></i>30</td>                                                                                                                                                       
+                                                </tr>
+                                                <tr class="head">
+                                                    <td><i class="icon-recepcion-vencidos"></i>16</td>
+                                                    <td><i class="icon-vencidos-interpretacion"></i>20%</td>
+                                                    <td><i class="icon-vencidos-recepcion"></i>30%</td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="2"><i class="icon-venta"></i> Ventas </td>
+                                                    <td> 2 </td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="2"><i class="icon-por-fabricar"></i>Por Fabricar</td>
+                                                    <td> 0 </td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="2"><i class="icon-por-interpretar"></i> Por interpretar </td>
+                                                    <td> 2 </td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="2"><i class="icon-maquillado"></i> Maquillado </td>
+                                                    <td> 0 </td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="2"><i class="icon-incidencia"></i> Incidencia </td>
+                                                    <td> 2 </td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="2"><i class="icon-pendiente-por-transmitir"></i>Pendiente por transmitir</td>
+                                                    <td> 0 </td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="2"><i class="icon-interpretando"></i> Interpretando </td>
+                                                    <td> 0 </td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="2"><i class="icon-por-interpretar"></i> Pendiente por interpretar </td>
+                                                    <td> 0 </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </td>
+                                <td>20</td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <td><i class="icon-servicios-autorizados_ultrasonido"></i>Ultrasonido</td>
+                                <td>10</td>
+                                <td>10</td>
+                                <td>6.2%</td>
+                                <td>20</td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <td><i class="icon-servicios-autorizados_laboratorio-clínico"></i>Laboratorio</td>
+                                <td>10</td>
+                                <td>10</td>
+                                <td>6.2%</td>
+                                <td>20</td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <td><i class="icon-servicios-autorizados_consulta-nutricional"></i>Nutrición</td>
+                                <td>10</td>
+                                <td>10</td>
+                                <td>6.2%</td>
+                                <td>20</td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <td><i class="icon-servicios-autorizados_densitometría-osea"></i>Densitometría</td>
+                                <td>10</td>
+                                <td>10</td>
+                                <td>6.2%</td>
+                                <td>20</td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <td><i class="icon-servicios-autorizados_mastografía"></i>Mastografía</td>
+                                <td>10</td>
+                                <td>10</td>
+                                <td>6.2%</td>
+                                <td>20</td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <td><i class="icon-servicios-autorizados_papanicolaou"></i>Papanicolaou</td>
+                                <td>10</td>
+                                <td>10</td>
+                                <td>6.2%</td>
+                                <td>20</td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <td><i class="icon-servicios-autorizados_rayos-x"></i>Rayos X</td>
+                                <td>10</td>
+                                <td>10</td>
+                                <td>6.2%</td>
+                                <td>20</td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <td><i class="icon-servicios-autorizados_electrocardiograma"></i>Electrocardiograma</td>
+                                <td>10</td>
+                                <td>10</td>
+                                <td>6.2%</td>
+                                <td>20</td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <td><i class="icon-servicios-autorizados_tomografía"></i>Tomografía</td>
+                                <td>10</td>
+                                <td>10</td>
+                                <td>6.2%</td>
+                                <td>20</td>
+                                <td>10</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="wrapp right-tabs alertas">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th colspan="6" class="right-table-tittle red-button"> ALERTAS</th>
+                                <td class="save-button"><i class="material-icons"> save </i></td>
+                            </tr>
+                        </thead>
+                            <thead class="right-tab-head alertas-head">
+                                <tr>
+                                    <th>HORA</th>
+                                    <th class="col4 align-left">ÁREA</th>
+                                    <th>TIPO</th>
+                                    <th>CANTIDAD</th>
+                                    <th>REFERENCIA</th>
+                                    <th >NOTIFICACIÓN</th>
+                                    <th class="col2">BLOQUEO</th>
+                                </tr>
+                            </thead>
+                    </table>
+                    <div class="tab-alertas">
+                        <table>
+
+                            <tbody class="right-tab-body">
+                                <tr>
+                                    <td>8:00</td>
+                                    <td class="col3 align-left"><i class="icon-servicios-autorizados_lentes"></i>Óptica</td>
+                                    <td>10</td>
+                                    <td>0/3</td>
+                                    <td>20</td>
+                                    <td id="notificacion" class="notif-display">
+                                        Selecciona
+                                        <div id="notification-list" class="lista-notif ocultar">
+                                            <ul>
+                                                <li>Ausentismo apoyo</li>
+                                                <li>Ausentismo capacitación o reunión</li>
+                                                <li>Ausentismo descanso</li>
+                                                <li>Ausentismo día familiar</li>
+                                                <li>Ausentismo incapacidad</li>
+                                                <li>Ausentismo injustificado</li>
+                                                <li>Ausentismo justificado</li>
+                                                <li>Ausentismo vacaciones</li>
+                                                <li>Capacidad instalada</li>
+                                                <li>Equipo manteniminto</li>
+                                                <li>Falla de equipo médico</li>
+                                                <li>Falla en sistema</li>
+                                                <li>Falta de personal</li>
+                                                <li>Horarios mal estructurados</li>
+                                                <li>Paros condiciones extremas</li>
+                                                <li>Personal fuera de sitio</li>
+                                                <li>Productividad colaboradores</li>
+                                                <li>Puesto vacante</li>
+                                                <li>Retardos</li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                    <td id="open-modal">
+                                        <label class="bloq-check">
+                                            <input type="checkbox" uncheked="true">
+                                            <span class="checkmark"></span>
+                                            <div>0000-00-00 / 00:00</div>
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>8:30</td>
+                                    <td class="align-left"><i class="icon-servicios-autorizados_ultrasonido"></i>Ultrasonido</td>
+                                    <td>10</td>
+                                    <td>6.2%</td>
+                                    <td>20</td>
+                                    <td class="notif-display">
+                                        Selecciona
+                                        <div class="lista-notif ocultar">
+                                            <ul>
+                                                <li>Ausentismo apoyo</li>
+                                                <li>Ausentismo capacitación o reunión</li>
+                                                <li>Ausentismo descanso</li>
+                                                <li>Ausentismo día familiar</li>
+                                                <li>Ausentismo incapacidad</li>
+                                                <li>Ausentismo injustificado</li>
+                                                <li>Ausentismo justificado</li>
+                                                <li>Ausentismo vacaciones</li>
+                                                <li>Capacidad instalada</li>
+                                                <li>Equipo manteniminto</li>
+                                                <li>Falla de equipo médico</li>
+                                                <li>Falla en sistema</li>
+                                                <li>Falta de personal</li>
+                                                <li>Horarios mal estructurados</li>
+                                                <li>Paros condiciones extremas</li>
+                                                <li>Personal fuera de sitio</li>
+                                                <li>Productividad colaboradores</li>
+                                                <li>Puesto vacante</li>
+                                                <li>Retardos</li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <label class="bloq-check">
+                                            <input type="checkbox" uncheked="true">
+                                            <span class="checkmark"></span>
+                                            <div>0000-00-00 / 00:00</div>
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>8:10</td>
+                                    <td class="align-left"><i class="icon-servicios-autorizados_laboratorio-clínico"></i>Laboratorio</td>
+                                    <td>10</td>
+                                    <td>6.2%</td>
+                                    <td>20</td>
+                                    <td class="notif-display">
+                                        Selecciona
+                                        <div class="lista-notif ocultar">
+                                            <ul>
+                                                <li>Ausentismo apoyo</li>
+                                                <li>Ausentismo capacitación o reunión</li>
+                                                <li>Ausentismo descanso</li>
+                                                <li>Ausentismo día familiar</li>
+                                                <li>Ausentismo incapacidad</li>
+                                                <li>Ausentismo injustificado</li>
+                                                <li>Ausentismo justificado</li>
+                                                <li>Ausentismo vacaciones</li>
+                                                <li>Capacidad instalada</li>
+                                                <li>Equipo manteniminto</li>
+                                                <li>Falla de equipo médico</li>
+                                                <li>Falla en sistema</li>
+                                                <li>Falta de personal</li>
+                                                <li>Horarios mal estructurados</li>
+                                                <li>Paros condiciones extremas</li>
+                                                <li>Personal fuera de sitio</li>
+                                                <li>Productividad colaboradores</li>
+                                                <li>Puesto vacante</li>
+                                                <li>Retardos</li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <label class="bloq-check">
+                                            <input type="checkbox" uncheked="true">
+                                            <span class="checkmark"></span>
+                                            <div>0000-00-00 / 00:00</div>
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>8:02</td>
+                                    <td class="align-left"><i class="icon-servicios-autorizados_consulta-nutricional"></i>Nutrición</td>
+                                    <td>10</td>
+                                    <td>6.2%</td>
+                                    <td>20</td>
+                                    <td class="notif-display">
+                                        Selecciona
+                                        <div class="lista-notif ocultar">
+                                            <ul>
+                                                <li>Ausentismo apoyo</li>
+                                                <li>Ausentismo capacitación o reunión</li>
+                                                <li>Ausentismo descanso</li>
+                                                <li>Ausentismo día familiar</li>
+                                                <li>Ausentismo incapacidad</li>
+                                                <li>Ausentismo injustificado</li>
+                                                <li>Ausentismo justificado</li>
+                                                <li>Ausentismo vacaciones</li>
+                                                <li>Capacidad instalada</li>
+                                                <li>Equipo manteniminto</li>
+                                                <li>Falla de equipo médico</li>
+                                                <li>Falla en sistema</li>
+                                                <li>Falta de personal</li>
+                                                <li>Horarios mal estructurados</li>
+                                                <li>Paros condiciones extremas</li>
+                                                <li>Personal fuera de sitio</li>
+                                                <li>Productividad colaboradores</li>
+                                                <li>Puesto vacante</li>
+                                                <li>Retardos</li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <label class="bloq-check">
+                                            <input type="checkbox" uncheked="true">
+                                            <span class="checkmark"></span>
+                                            <div>0000-00-00 / 00:00</div>
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>9:00</td>
+                                    <td class="align-left"><i class="icon-servicios-autorizados_densitometría-osea"></i>Densitometría</td>
+                                    <td>10</td>
+                                    <td>6.2%</td>
+                                    <td>20</td>
+                                    <td class="notif-display">
+                                        Selecciona
+                                        <div class="lista-notif ocultar">
+                                            <ul>
+                                                <li>Ausentismo apoyo</li>
+                                                <li>Ausentismo capacitación o reunión</li>
+                                                <li>Ausentismo descanso</li>
+                                                <li>Ausentismo día familiar</li>
+                                                <li>Ausentismo incapacidad</li>
+                                                <li>Ausentismo injustificado</li>
+                                                <li>Ausentismo justificado</li>
+                                                <li>Ausentismo vacaciones</li>
+                                                <li>Capacidad instalada</li>
+                                                <li>Equipo manteniminto</li>
+                                                <li>Falla de equipo médico</li>
+                                                <li>Falla en sistema</li>
+                                                <li>Falta de personal</li>
+                                                <li>Horarios mal estructurados</li>
+                                                <li>Paros condiciones extremas</li>
+                                                <li>Personal fuera de sitio</li>
+                                                <li>Productividad colaboradores</li>
+                                                <li>Puesto vacante</li>
+                                                <li>Retardos</li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <label class="bloq-check">
+                                            <input type="checkbox" uncheked="true">
+                                            <span class="checkmark"></span>
+                                            <div>0000-00-00 / 00:00</div>
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>8:58</td>
+                                    <td class="align-left"><i class="icon-servicios-autorizados_mastografía"></i>Mastografía</td>
+                                    <td>10</td>
+                                    <td>6.2%</td>
+                                    <td>20</td>
+                                    <td class="notif-display">
+                                        Selecciona
+                                        <div class="lista-notif ocultar">
+                                            <ul>
+                                                <li>Ausentismo apoyo</li>
+                                                <li>Ausentismo capacitación o reunión</li>
+                                                <li>Ausentismo descanso</li>
+                                                <li>Ausentismo día familiar</li>
+                                                <li>Ausentismo incapacidad</li>
+                                                <li>Ausentismo injustificado</li>
+                                                <li>Ausentismo justificado</li>
+                                                <li>Ausentismo vacaciones</li>
+                                                <li>Capacidad instalada</li>
+                                                <li>Equipo manteniminto</li>
+                                                <li>Falla de equipo médico</li>
+                                                <li>Falla en sistema</li>
+                                                <li>Falta de personal</li>
+                                                <li>Horarios mal estructurados</li>
+                                                <li>Paros condiciones extremas</li>
+                                                <li>Personal fuera de sitio</li>
+                                                <li>Productividad colaboradores</li>
+                                                <li>Puesto vacante</li>
+                                                <li>Retardos</li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <label class="bloq-check">
+                                            <input type="checkbox" uncheked="true">
+                                            <span class="checkmark"></span>
+                                            <div>0000-00-00 / 00:00</div>
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>8:07</td>
+                                    <td class="align-left"><i class="icon-servicios-autorizados_papanicolaou"></i>Papanicolaou</td>
+                                    <td>10</td>
+                                    <td>6.2%</td>
+                                    <td>20</td>
+                                    <td class="notif-display">
+                                        Selecciona
+                                        <div class="lista-notif ocultar">
+                                            <ul>
+                                                <li>Ausentismo apoyo</li>
+                                                <li>Ausentismo capacitación o reunión</li>
+                                                <li>Ausentismo descanso</li>
+                                                <li>Ausentismo día familiar</li>
+                                                <li>Ausentismo incapacidad</li>
+                                                <li>Ausentismo injustificado</li>
+                                                <li>Ausentismo justificado</li>
+                                                <li>Ausentismo vacaciones</li>
+                                                <li>Capacidad instalada</li>
+                                                <li>Equipo manteniminto</li>
+                                                <li>Falla de equipo médico</li>
+                                                <li>Falla en sistema</li>
+                                                <li>Falta de personal</li>
+                                                <li>Horarios mal estructurados</li>
+                                                <li>Paros condiciones extremas</li>
+                                                <li>Personal fuera de sitio</li>
+                                                <li>Productividad colaboradores</li>
+                                                <li>Puesto vacante</li>
+                                                <li>Retardos</li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <label class="bloq-check">
+                                            <input type="checkbox" uncheked="true">
+                                            <span class="checkmark"></span>
+                                            <div>0000-00-00 / 00:00</div>
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>8:03</td>
+                                    <td class="align-left"><i class="icon-servicios-autorizados_rayos-x"></i>Rayos X</td>
+                                    <td>10</td>
+                                    <td>6.2%</td>
+                                    <td>20</td>
+                                    <td class="notif-display">
+                                        Selecciona
+                                        <div class="lista-notif ocultar">
+                                            <ul>
+                                                <li>Ausentismo apoyo</li>
+                                                <li>Ausentismo capacitación o reunión</li>
+                                                <li>Ausentismo descanso</li>
+                                                <li>Ausentismo día familiar</li>
+                                                <li>Ausentismo incapacidad</li>
+                                                <li>Ausentismo injustificado</li>
+                                                <li>Ausentismo justificado</li>
+                                                <li>Ausentismo vacaciones</li>
+                                                <li>Capacidad instalada</li>
+                                                <li>Equipo manteniminto</li>
+                                                <li>Falla de equipo médico</li>
+                                                <li>Falla en sistema</li>
+                                                <li>Falta de personal</li>
+                                                <li>Horarios mal estructurados</li>
+                                                <li>Paros condiciones extremas</li>
+                                                <li>Personal fuera de sitio</li>
+                                                <li>Productividad colaboradores</li>
+                                                <li>Puesto vacante</li>
+                                                <li>Retardos</li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <label class="bloq-check">
+                                            <input type="checkbox" uncheked="true">
+                                            <span class="checkmark"></span>
+                                            <div>0000-00-00 / 00:00</div>
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>8:03</td>
+                                    <td class="align-left"><i class="icon-servicios-autorizados_electrocardiograma"></i>Electrocardiograma</td>
+                                    <td>10</td>
+                                    <td>6.2%</td>
+                                    <td>20</td>
+                                    <td class="notif-display">
+                                        Selecciona
+                                        <div class="lista-notif ocultar">
+                                            <ul>
+                                                <li>Ausentismo apoyo</li>
+                                                <li>Ausentismo capacitación o reunión</li>
+                                                <li>Ausentismo descanso</li>
+                                                <li>Ausentismo día familiar</li>
+                                                <li>Ausentismo incapacidad</li>
+                                                <li>Ausentismo injustificado</li>
+                                                <li>Ausentismo justificado</li>
+                                                <li>Ausentismo vacaciones</li>
+                                                <li>Capacidad instalada</li>
+                                                <li>Equipo manteniminto</li>
+                                                <li>Falla de equipo médico</li>
+                                                <li>Falla en sistema</li>
+                                                <li>Falta de personal</li>
+                                                <li>Horarios mal estructurados</li>
+                                                <li>Paros condiciones extremas</li>
+                                                <li>Personal fuera de sitio</li>
+                                                <li>Productividad colaboradores</li>
+                                                <li>Puesto vacante</li>
+                                                <li>Retardos</li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <label class="bloq-check">
+                                            <input type="checkbox" uncheked="true">
+                                            <span class="checkmark"></span>
+                                            <div>0000-00-00 / 00:00</div>
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>8:08</td>
+                                    <td class="align-left"><i class="icon-servicios-autorizados_tomografía"></i>Tomografía</td>
+                                    <td>10</td>
+                                    <td>6.2%</td>
+                                    <td>20</td>
+                                    <td class="notif-display">
+                                        Selecciona
+                                        <div class="lista-notif ocultar">
+                                            <ul>
+                                                <li>Ausentismo apoyo</li>
+                                                <li>Ausentismo capacitación o reunión</li>
+                                                <li>Ausentismo descanso</li>
+                                                <li>Ausentismo día familiar</li>
+                                                <li>Ausentismo incapacidad</li>
+                                                <li>Ausentismo injustificado</li>
+                                                <li>Ausentismo justificado</li>
+                                                <li>Ausentismo vacaciones</li>
+                                                <li>Capacidad instalada</li>
+                                                <li>Equipo manteniminto</li>
+                                                <li>Falla de equipo médico</li>
+                                                <li>Falla en sistema</li>
+                                                <li>Falta de personal</li>
+                                                <li>Horarios mal estructurados</li>
+                                                <li>Paros condiciones extremas</li>
+                                                <li>Personal fuera de sitio</li>
+                                                <li>Productividad colaboradores</li>
+                                                <li>Puesto vacante</li>
+                                                <li>Retardos</li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <label class="bloq-check">
+                                            <input type="checkbox" uncheked="true">
+                                            <span class="checkmark"></span>
+                                            <div>0000-00-00 / 00:00</div>
+                                        </label>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <!-- ----Tabla derecha----- -->
+        </div>
+    </div>
+    <!-- ----Wrap de las tablas---- -->
+    <!-- ----Modulo bloqueo---- -->
+    <div id="modal-time" class="modal-dialog ocultar">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h4 class="modal-title">Bloqueo de alerta <span></span><span></span></h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <label>Hora</label>
+                        <select id="ddlTipoBloqueo" class="form-control">
+                            <option value="13">13</option>
+                            <option value="14">14</option>
+                            <option value="15">15</option>
+                            <option value="16">16</option>
+                            <option value="17">17</option>
+                            <option value="18">18</option>
+                            <option value="19">19</option>
+                            <option value="20">20</option>
+                            <option value="21">21</option>
+                            <option value="22">22</option>
+                            <option value="23">23</option>
+                            <option value="24">24</option>
+                        </select>
+                    </div>
+                    <div class="col-sm-6">
+                        <label>Fecha</label>
+                        <input type="text" class="form-control datepick" name="daterange-singe-date-picker" value="10/24/1984" id="datetimepicker4">
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button id="modal-close" type="button" class="btn btn-primary">Agregar Bloque</button>
+            </div>
+        </div>
+    </div>
+    <!-- ----Modulo bloqueo---- -->
+    <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="js/jquery.easypiechart.min.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="js/monitoreo.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
+
+</body>
+</html>
