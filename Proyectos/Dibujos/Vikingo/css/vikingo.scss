@@ -1,0 +1,391 @@
+$blue-helmet: #343448;
+$grey-dark: #80808d;
+$grey: #9999a6;
+$face-light: #f5c7bf;
+$face-dark: #eca496;
+$beard-dark: #e23e0a;
+$beard-light: #ff4a01;
+$paint-viking: #80CCDE;
+
+// PseudoElement
+@mixin ps {
+  content: "";
+  position: absolute;
+}
+
+@mixin box($w, $h) {
+  width: $w;
+  height: $h;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: white;
+  margin-top: 200px;
+}
+
+.viking {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.helmet-container {
+  position: relative;
+  top: -200%;
+  // Animar
+  //transform: translateY(-500px);
+  //animation: m-vertical 0.7s 0.7s ease-out forwards;
+  z-index: 1;
+}
+
+.helmet-extras {
+  position: absolute;
+  z-index: 1;
+  width: 200px;
+
+  &::before {
+    @include ps();
+    border-left: 25px solid transparent;
+    border-right: 50px solid $grey-dark;
+    border-top: 15px solid transparent;
+    border-bottom: 50px solid transparent;
+    left: 50%;
+    top: -10px;
+    transform: translateX(calc(-50% - 37px));
+  }
+
+  &::after {
+    @include ps();
+    border-left: 50px solid $grey-dark;
+    border-right: 25px solid transparent;
+    border-top: 15px solid transparent;
+    border-bottom: 50px solid transparent;
+    right: 50%;
+    top: -10px;
+    transform: translateX(calc(50% + 37px));
+  }
+}
+
+.horn-circles {
+  position: absolute;
+  width: 100%;
+
+  .inner-horn {
+    position: absolute;
+    z-index: -1;
+    @include box(170px, 170px);
+    background-color: transparent;
+    box-shadow: 0px -44px $grey, 0px -47px 0px 10px $grey-dark;
+    border-radius: 50%;
+
+    &:nth-child(1) {
+        left: 5px;
+        top: -130px;
+        transform: rotate(-140deg);
+    }
+    &:nth-child(2) {
+      right: 5px;
+      top: -130px;
+      transform: rotate(140deg);
+    }
+  }
+}
+
+.horn-container {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  width: 200px;
+
+  .horn {
+    position: relative;
+    @include box(50px, 30px);
+    background-color: $grey-dark;
+    margin: 0 10px;
+
+    &:nth-child(1) {
+      transform: rotate(-60deg);
+      top: 20px;
+      left: -3px;
+    }
+
+    &:nth-child(2) {
+      transform: rotate(60deg);
+      top: 20px;
+      right: -3px;
+    }
+  }
+}
+
+.helmet {
+  position: relative;
+  @include box(200px, 100px);
+  background-color: white;
+  border-radius: 100px 100px 0 0;
+  overflow: hidden;
+
+  .main {
+    background-color: $blue-helmet;
+    @include box(100%, 100%);
+  }
+}
+
+.helmet-bottom {
+  position: relative;
+  @include box(200px, 30px);
+  background: $grey-dark;
+  background-image: radial-gradient(
+    20px 20px,
+    $grey,
+    $grey 25%,
+    $grey-dark 25%
+  );
+  background-size: 2.1em;
+  z-index: 1;
+
+  &::before,
+  &::after {
+    @include ps();
+    border-left: 15px solid transparent;
+    border-right: 15px solid $grey-dark;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+  }
+
+  &::before {
+    left: -30px;
+  }
+  &::after {
+    right: -30px;
+    transform: scale(-1, 1);
+  }
+}
+
+.face-container {
+  position: relative;
+  
+  &::after {
+    @include ps();
+    @include box(30px, 40px);
+    background-color: $face-dark;
+    top: 0px;
+    left: 50%;
+    transform: translatex(-50%);
+    z-index: 1;
+    opacity: 0;
+    animation: show-it 0.5s 1s linear forwards;
+  }
+}
+
+.face-base {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include box(200px, 150px);
+  background: $face-light;
+  border-radius: 0 0 50% 50%;
+
+  //transform: translateY(-300%);
+  //animation: m-vertical 1s ease-out forwards;
+  
+  .face-head {
+    position: absolute;
+    top: -100px;
+    @include box(100%, 100px);
+    background-color: $face-light;
+    border-radius: 100px 100px 0 0;
+    &::after{
+        content: "";
+        position: absolute;
+        width: 20px;
+        height: 35px;
+        left: 45px;
+        top: 125px;
+        background-color: $paint-viking;
+      }
+      &::before{
+        content: "";
+        position: absolute;
+        width: 20px;
+        height: 35px;
+        left: 135px;
+        top: 125px;
+        background-color: $paint-viking;
+      }
+  }
+
+  .face-top {
+    display: flex;
+    justify-content: center;
+    perspective: 190px;
+  }
+
+  .beard-pin-container {
+    position: relative;
+    width: 30px;
+
+    &.right {
+      transform: scale(-1, 1);
+    }
+
+    .beard-pin {
+      @include box(13px, 23px);
+      overflow: hidden;
+
+      .circle {
+        position: relative;
+        @include box(30px, 40px);
+        left: -18px;
+        top: -17px;
+        background-color: $beard-light;
+        border-radius: 30px;
+      }
+    }
+
+    .ear {
+      position: absolute;
+      @include box(25px, 25px);
+      left: -15px;
+      top: 10px;
+      border-radius: 50%;
+      z-index: -1;
+      background-color: $face-light;
+
+      &::after {
+        @include ps();
+        @include box(70px, 70px);
+        top: 11px;
+        left: -20px;
+        background-color: $beard-dark;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  .eye-container {
+    @include box(50px, 15px);
+    overflow: hidden;
+
+    .eye {
+      position: relative;
+      @include box(80px, 100px);
+      bottom: 89px;
+      left: -15px;
+      background-color: $face-dark;
+      border-radius: 50%;
+    }
+  }
+
+  .nose-container {
+    position: relative;
+    top: -8px;
+    @include box(40px, 68px);
+    background-color: $face-dark;
+    transform: rotateX(30deg);
+
+    &::after {
+      @include ps();
+      border-top: 12px solid $face-dark;
+      border-left: 20px solid transparent;
+      border-right: 20px solid transparent;
+      bottom: -12px;
+    }
+
+    &::before {
+      bottom: -32px;
+      @include ps();
+      @include box(40px, 15px);
+      background-color: $face-dark;
+      border-radius: 50%;
+      z-index: -0;
+    }
+  }
+
+  .face-mid {
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    .beard {
+      @include box(140px, 140px);
+      background-color: $beard-light;
+      border-radius: 50%;
+
+      &:nth-child(1) {
+        margin-right: -40px;
+        box-shadow: 30px 40px 0 -20px $beard-dark;
+      }
+
+      &:nth-child(3) {
+        margin-left: -40px;
+        box-shadow: -30px 40px 0 -20px $beard-dark;
+      }
+    }
+
+    .mustache {
+      position: relative;
+      @include box(140px, 90px);
+      top: -10px;
+      border: 20px solid $beard-light;
+      border-radius: 70px 70px 0 0;
+
+      &::after {
+        top: -20px;
+        left: 30px;
+        @include ps();
+        border-top: 12px solid $face-dark;
+        border-left: 20px solid transparent;
+        border-right: 20px solid transparent;
+      }
+    }
+  }
+
+  .face-bottom {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    top: -90px;
+
+    .beard-mid {
+      position: relative;
+      @include box(150px, 150px);
+      background-color: $beard-light;
+      border-radius: 50%;
+
+      &::before {
+        @include ps();
+        @include box(70px, 70px);
+        left: 50%;
+        background-color: $beard-light;
+        border-radius: 50%;
+        transform: translatex(-50%);
+        box-shadow: 19px 30px 0 -13px $beard-dark,
+          -19px 30px 0 -13px $beard-dark;
+      }
+    }
+  }
+}
+
+@keyframes m-vertical {
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes show-it {
+  to {
+    opacity: 1;
+  }
+}

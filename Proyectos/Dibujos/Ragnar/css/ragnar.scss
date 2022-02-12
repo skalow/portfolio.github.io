@@ -1,0 +1,1552 @@
+$fondo: transparent;
+$face-skin: #ffdcd0;
+$light-skin: #ffddb1;
+$up-light-skin: #ffebd2;
+$eye-color: #000cff;
+$eyebrow-color: #cfb826;
+$eye-font: #fffffa;
+$eye-light-point: #fff5b2;
+$hair-color: #cfb821;
+$hair-two: #b09d18;
+$nose-color: #ffd090;
+$lips-color: #ff946e;
+$neck-color: #ffddb5;
+$beard-color-1: #cfb820;
+$beard-color-2: #b09c1c;
+$beard-color-3: #8c8113;
+$beard-color-4: #cfb81f;
+$jacket-color-1: #020000;
+$jacket-color-2: #80807f;
+
+body{
+    margin: 0;
+}
+.container-fluid{
+    margin: 0 auto;
+    position: relative;
+    top: 100px;
+    .marco{
+        margin: 0 auto;
+        width: 320px;
+    } 
+}
+.line-1{
+    display: flex;
+    grid-gap: 0;
+    grid-template-columns: repeat(16,1fr);
+    grid-template-rows:repeat(16,20px);
+    grid-template-areas: 
+        "pixel-1 pixel-2 pixel-3 pixel-4 pixel-5 pixel-6 pixel-7 pixel-8 pixel-9 pixel-10 pixel-11 pixel-12 pixel-13 pixel-14 pixel-15 pixel-16";
+        div{
+            width: 20px;
+            height: 20px;
+        }
+        .p-1{
+            background-color: $fondo;
+            grid-area: pixel-1;
+        }
+        .p-2{
+            background-color: $fondo;
+            grid-area: pixel-2;
+        }
+        .p-3{
+            background-color: $fondo;
+            grid-area: pixel-3;
+        }
+        .p-4{
+            background-color: $fondo;
+            grid-area: pixel-4;
+        }
+        .p-5{
+            background-color: $fondo;
+            grid-area: pixel-5;
+        }
+        .p-6{
+            background-color: $fondo;
+            grid-area: pixel-6;
+        }
+        .p-7{
+            background-color: $fondo;
+            grid-area: pixel-7;
+        }
+        .p-8{
+            background-color: $fondo;
+            grid-area: pixel-8;
+        }
+        .p-9{
+            background-color: $fondo;
+            grid-area: pixel-9;
+        }
+        .p-10{
+            background-color: $fondo;
+            grid-area: pixel-10;
+        }
+        .p-11{
+            background-color: $fondo;
+            grid-area: pixel-11;
+        }
+        .p-12{
+            background-color: $fondo;
+            grid-area: pixel-12;
+        }
+        .p-13{
+            background-color: $fondo;
+            grid-area: pixel-13;
+        }
+        .p-14{
+            background-color: $fondo;
+            grid-area: pixel-14;
+        }
+        .p-15{
+            background-color: $fondo;
+            grid-area: pixel-15;
+        }
+        .p-16{
+            background-color: $fondo;
+            grid-area: pixel-16;
+        }
+}
+.line-2{
+    display: flex;
+    grid-gap: 0;
+    grid-template-columns: repeat(16,1fr);
+    grid-template-rows:repeat(16,20px);
+    grid-template-areas: 
+        "pixel-1 pixel-2 pixel-3 pixel-4 pixel-5 pixel-6 pixel-7 pixel-8 pixel-9 pixel-10 pixel-11 pixel-12 pixel-13 pixel-14 pixel-15 pixel-16";
+        div{
+            width: 20px;
+            height: 20px;
+        }
+        .p-1{
+            background-color: $fondo;
+            grid-area: pixel-1;
+        }
+        .p-2{
+            background-color: $fondo;
+            grid-area: pixel-2;
+        }
+        .p-3{
+            background-color: $fondo;
+            grid-area: pixel-3;
+        }
+        .p-4{
+            background-color: $fondo;
+            grid-area: pixel-4;
+        }
+        .p-5{
+            background-color: $fondo;
+            grid-area: pixel-5;
+        }
+        .p-6{
+            background-color: $hair-color;
+            grid-area: pixel-6;
+        }
+        .p-7{
+            background-color: $hair-two;
+            grid-area: pixel-7;
+        }
+        .p-8{
+            background-color: $hair-color;
+            grid-area: pixel-8;
+        }
+        .p-9{
+            background-color: $hair-two;
+            grid-area: pixel-9;
+        }
+        .p-10{
+            background-color: $hair-color;
+            grid-area: pixel-10;
+        }
+        .p-11{
+            background-color: $hair-two;
+            grid-area: pixel-11;
+        }
+        .p-12{
+            background-color: $hair-color;
+            grid-area: pixel-12;
+        }
+        .p-13{
+            background-color: $fondo;
+            grid-area: pixel-13;
+        }
+        .p-14{
+            background-color: $fondo;
+            grid-area: pixel-14;
+        }
+        .p-15{
+            background-color: $fondo;
+            grid-area: pixel-15;
+        }
+        .p-16{
+            background-color: $fondo;
+            grid-area: pixel-16;
+        }
+}
+.line-3{
+    display: flex;
+    grid-gap: 0;
+    grid-template-columns: repeat(16,1fr);
+    grid-template-rows:repeat(16,20px);
+    grid-template-areas: 
+        "pixel-1 pixel-2 pixel-3 pixel-4 pixel-5 pixel-6 pixel-7 pixel-8 pixel-9 pixel-10 pixel-11 pixel-12 pixel-13 pixel-14 pixel-15 pixel-16";
+        div{
+            width: 20px;
+            height: 20px;
+        }
+        .p-1{
+            background-color: $fondo;
+            grid-area: pixel-1;
+        }
+        .p-2{
+            background-color: $fondo;
+            grid-area: pixel-2;
+        }
+        .p-3{
+            background-color: $fondo;
+            grid-area: pixel-3;
+        }
+        .p-4{
+            background-color: $fondo;
+            grid-area: pixel-4;
+        }
+        .p-5{
+            background-color: $hair-color;
+            grid-area: pixel-5;
+        }
+        .p-6{
+            background-color: $hair-color;
+            grid-area: pixel-6;
+        }
+        .p-7{
+            background-color: $hair-color;
+            grid-area: pixel-7;
+        }
+        .p-8{
+            background-color: $hair-color;
+            grid-area: pixel-8;
+        }
+        .p-9{
+            background-color: $hair-two;
+            grid-area: pixel-9;
+        }
+        .p-10{
+            background-color: $hair-color;
+            grid-area: pixel-10;
+        }
+        .p-11{
+            background-color: $hair-color;
+            grid-area: pixel-11;
+        }
+        .p-12{
+            background-color: $hair-color;
+            grid-area: pixel-12;
+        }
+        .p-13{
+            background-color: $hair-color;
+            grid-area: pixel-13;
+        }
+        .p-14{
+            background-color: $fondo;
+            grid-area: pixel-14;
+        }
+        .p-15{
+            background-color: $fondo;
+            grid-area: pixel-15;
+        }
+        .p-16{
+            background-color: $fondo;
+            grid-area: pixel-16;
+        }
+}
+.line-4{
+    display: flex;
+    grid-gap: 0;
+    grid-template-columns: repeat(16,1fr);
+    grid-template-rows:repeat(16,20px);
+    grid-template-areas: 
+        "pixel-1 pixel-2 pixel-3 pixel-4 pixel-5 pixel-6 pixel-7 pixel-8 pixel-9 pixel-10 pixel-11 pixel-12 pixel-13 pixel-14 pixel-15 pixel-16";
+        div{
+            width: 20px;
+            height: 20px;
+        }
+        .p-1{
+            background-color: $fondo;
+            grid-area: pixel-1;
+        }
+        .p-2{
+            background-color: $fondo;
+            grid-area: pixel-2;
+        }
+        .p-3{
+            background-color: $fondo;
+            grid-area: pixel-3;
+        }
+        .p-4{
+            background-color: $fondo;
+            grid-area: pixel-4;
+        }
+        .p-5{
+            background-color: $face-skin;
+            grid-area: pixel-5;
+        }
+        .p-6{
+            background-color: $face-skin;
+            grid-area: pixel-6;
+        }
+        .p-7{
+            background-color: $face-skin;
+            grid-area: pixel-7;
+        }
+        .p-8{
+            background-color: $up-light-skin;
+            grid-area: pixel-8;
+        }
+        .p-9{
+            background-color: $up-light-skin;
+            grid-area: pixel-9;
+        }
+        .p-10{
+            background-color: $face-skin;
+            grid-area: pixel-10;
+        }
+        .p-11{
+            background-color: $face-skin;
+            grid-area: pixel-11;
+        }
+        .p-12{
+            background-color: $up-light-skin;
+            grid-area: pixel-12;
+        }
+        .p-13{
+            background-color: $up-light-skin;
+            grid-area: pixel-13;
+        }
+        .p-14{
+            background-color: $fondo;
+            grid-area: pixel-14;
+        }
+        .p-15{
+            background-color: $fondo;
+            grid-area: pixel-15;
+        }
+        .p-16{
+            background-color: $fondo;
+            grid-area: pixel-16;
+        }
+}
+.line-5{
+    display: flex;
+    grid-gap: 0;
+    grid-template-columns: repeat(16,1fr);
+    grid-template-rows:repeat(16,20px);
+    grid-template-areas: 
+        "pixel-1 pixel-2 pixel-3 pixel-4 pixel-5 pixel-6 pixel-7 pixel-8 pixel-9 pixel-10 pixel-11 pixel-12 pixel-13 pixel-14 pixel-15 pixel-16";
+        div{
+            width: 20px;
+            height: 20px;
+        }
+        .p-1{
+            background-color: $fondo;
+            grid-area: pixel-1;
+        }
+        .p-2{
+            background-color: $fondo;
+            grid-area: pixel-2;
+        }
+        .p-3{
+            background-color: $fondo;
+            grid-area: pixel-3;
+        }
+        .p-4{
+            background-color: $face-skin;
+            grid-area: pixel-4;
+        }
+        .p-5{
+            background-color: $face-skin;
+            grid-area: pixel-5;
+        }
+        .p-6{
+            background-color: $face-skin;
+            grid-area: pixel-6;
+        }
+        .p-7{
+            background-color: $face-skin;
+            grid-area: pixel-7;
+        }
+        .p-8{
+            background-color: $up-light-skin;
+            grid-area: pixel-8;
+        }
+        .p-9{
+            background-color: $up-light-skin;
+            grid-area: pixel-9;
+        }
+        .p-10{
+            background-color: $face-skin;
+            grid-area: pixel-10;
+        }
+        .p-11{
+            background-color: $face-skin;
+            grid-area: pixel-11;
+        }
+        .p-12{
+            background-color: $up-light-skin;
+            grid-area: pixel-12;
+        }
+        .p-13{
+            background-color: $up-light-skin;
+            grid-area: pixel-13;
+        }
+        .p-14{
+            background-color: $up-light-skin;
+            grid-area: pixel-14;
+        }
+        .p-15{
+            background-color: $fondo;
+            grid-area: pixel-15;
+        }
+        .p-16{
+            background-color: $fondo;
+            grid-area: pixel-16;
+        }
+}
+.line-6{
+    display: flex;
+    grid-gap: 0;
+    grid-template-columns: repeat(16,1fr);
+    grid-template-rows:repeat(16,20px);
+    grid-template-areas: 
+        "pixel-1 pixel-2 pixel-3 pixel-4 pixel-5 pixel-6 pixel-7 pixel-8 pixel-9 pixel-10 pixel-11 pixel-12 pixel-13 pixel-14 pixel-15 pixel-16";
+        div{
+            width: 20px;
+            height: 20px;
+        }
+        .p-1{
+            background-color: $fondo;
+            grid-area: pixel-1;
+        }
+        .p-2{
+            background-color: $fondo;
+            grid-area: pixel-2;
+        }
+        .p-3{
+            background-color: $fondo;
+            grid-area: pixel-3;
+        }
+        .p-4{
+            background-color: $light-skin;
+            grid-area: pixel-4;
+        }
+        .p-5{
+            background-color: $face-skin;
+            grid-area: pixel-5;
+        }
+        .p-6{
+            background-color: $face-skin;
+            grid-area: pixel-6;
+        }
+        .p-7{
+            background-color: $face-skin;
+            grid-area: pixel-7;
+        }
+        .p-8{
+            background-color: $face-skin;
+            grid-area: pixel-8;
+        }
+        .p-9{
+            background-color: $up-light-skin;
+            grid-area: pixel-9;
+        }
+        .p-10{
+            background-color: $face-skin;
+            grid-area: pixel-10;
+        }
+        .p-11{
+            background-color: $face-skin;
+            grid-area: pixel-11;
+        }
+        .p-12{
+            background-color: $up-light-skin;
+            grid-area: pixel-12;
+        }
+        .p-13{
+            background-color: $up-light-skin;
+            grid-area: pixel-13;
+        }
+        .p-14{
+            background-color: $up-light-skin;
+            grid-area: pixel-14;
+        }
+        .p-15{
+            background-color: $fondo;
+            grid-area: pixel-15;
+        }
+        .p-16{
+            background-color: $fondo;
+            grid-area: pixel-16;
+        }
+}
+.line-7{
+    display: flex;
+    grid-gap: 0;
+    grid-template-columns: repeat(16,1fr);
+    grid-template-rows:repeat(16,20px);
+    grid-template-areas: 
+        "pixel-1 pixel-2 pixel-3 pixel-4 pixel-5 pixel-6 pixel-7 pixel-8 pixel-9 pixel-10 pixel-11 pixel-12 pixel-13 pixel-14 pixel-15 pixel-16";
+        div{
+            width: 20px;
+            height: 20px;
+        }
+        .p-1{
+            background-color: $fondo;
+            grid-area: pixel-1;
+        }
+        .p-2{
+            background-color: $fondo;
+            grid-area: pixel-2;
+        }
+        .p-3{
+            background-color: $light-skin;
+            grid-area: pixel-3;
+        }
+        .p-4{
+            background-color: $light-skin;
+            grid-area: pixel-4;
+        }
+        .p-5{
+            background-color: $eyebrow-color;
+            grid-area: pixel-5;
+        }
+        .p-6{
+            background-color: $eyebrow-color;
+            grid-area: pixel-6;
+        }
+        .p-7{
+            background-color: $eyebrow-color;
+            grid-area: pixel-7;
+        }
+        .p-8{
+            background-color: $face-skin;
+            grid-area: pixel-8;
+        }
+        .p-9{
+            background-color: $face-skin;
+            grid-area: pixel-9;
+        }
+        .p-10{
+            background-color: $eyebrow-color;
+            grid-area: pixel-10;
+        }
+        .p-11{
+            background-color: $eyebrow-color;
+            grid-area: pixel-11;
+        }
+        .p-12{
+            background-color: $eyebrow-color;
+            grid-area: pixel-12;
+        }
+        .p-13{
+            background-color: $eye-light-point;
+            grid-area: pixel-13;
+        }
+        .p-14{
+            background-color: $up-light-skin;
+            grid-area: pixel-14;
+        }
+        .p-15{
+            background-color: $light-skin;
+            grid-area: pixel-15;
+        }
+        .p-16{
+            background-color: $fondo;
+            grid-area: pixel-16;
+        }
+}
+.line-8{
+    display: flex;
+    grid-gap: 0;
+    grid-template-columns: repeat(16,1fr);
+    grid-template-rows:repeat(16,20px);
+    grid-template-areas: 
+        "pixel-1 pixel-2 pixel-3 pixel-4 pixel-5 pixel-6 pixel-7 pixel-8 pixel-9 pixel-10 pixel-11 pixel-12 pixel-13 pixel-14 pixel-15 pixel-16";
+        div{
+            width: 20px;
+            height: 20px;
+        }
+        .p-1{
+            background-color: $fondo;
+            grid-area: pixel-1;
+        }
+        .p-2{
+            background-color: $fondo;
+            grid-area: pixel-2;
+        }
+        .p-3{
+            background-color: $light-skin;
+            grid-area: pixel-3;
+        }
+        .p-4{
+            background-color: $light-skin;
+            grid-area: pixel-4;
+        }
+        .p-5{
+            background-color: $eye-font;
+            grid-area: pixel-5;
+        }
+        .p-6{
+            background-color: $eye-color;
+            grid-area: pixel-6;
+        }
+        .p-7{
+            background-color: $eye-font;
+            grid-area: pixel-7;
+        }
+        .p-8{
+            background-color: $face-skin;
+            grid-area: pixel-8;
+        }
+        .p-9{
+            background-color: $face-skin;
+            grid-area: pixel-9;
+        }
+        .p-10{
+            background-color: $eye-font;
+            grid-area: pixel-10;
+        }
+        .p-11{
+            background-color: $eye-color;
+            grid-area: pixel-11;
+        }
+        .p-12{
+            background-color: $eye-font;
+            grid-area: pixel-12;
+        }
+        .p-13{
+            background-color: $light-skin;
+            grid-area: pixel-13;
+        }
+        .p-14{
+            background-color: $up-light-skin;
+            grid-area: pixel-14;
+        }
+        .p-15{
+            background-color: $light-skin;
+            grid-area: pixel-15;
+        }
+        .p-16{
+            background-color: $fondo;
+            grid-area: pixel-16;
+        }
+}
+.line-9{
+    display: flex;
+    grid-gap: 0;
+    grid-template-columns: repeat(16,1fr);
+    grid-template-rows:repeat(16,20px);
+    grid-template-areas: 
+        "pixel-1 pixel-2 pixel-3 pixel-4 pixel-5 pixel-6 pixel-7 pixel-8 pixel-9 pixel-10 pixel-11 pixel-12 pixel-13 pixel-14 pixel-15 pixel-16";
+        div{
+            width: 20px;
+            height: 20px;
+        }
+        .p-1{
+            background-color: $fondo;
+            grid-area: pixel-1;
+        }
+        .p-2{
+            background-color: $fondo;
+            grid-area: pixel-2;
+        }
+        .p-3{
+            background-color: $light-skin;
+            grid-area: pixel-3;
+        }
+        .p-4{
+            background-color: $light-skin;
+            grid-area: pixel-4;
+        }
+        .p-5{
+            background-color: $light-skin;
+            grid-area: pixel-5;
+        }
+        .p-6{
+            background-color: $eye-font;
+            grid-area: pixel-6;
+        }
+        .p-7{
+            background-color: $light-skin;
+            grid-area: pixel-7;
+        }
+        .p-8{
+            background-color: $face-skin;
+            grid-area: pixel-8;
+        }
+        .p-9{
+            background-color: $face-skin;
+            grid-area: pixel-9;
+        }
+        .p-10{
+            background-color: $light-skin;
+            grid-area: pixel-10;
+        }
+        .p-11{
+            background-color: $eye-font;
+            grid-area: pixel-11;
+        }
+        .p-12{
+            background-color: $light-skin;
+            grid-area: pixel-12;
+        }
+        .p-13{
+            background-color: $light-skin;
+            grid-area: pixel-13;
+        }
+        .p-14{
+            background-color: $up-light-skin;
+            grid-area: pixel-14;
+        }
+        .p-15{
+            background-color: $light-skin;
+            grid-area: pixel-15;
+        }
+        .p-16{
+            background-color: $fondo;
+            grid-area: pixel-16;
+        }
+}
+.line-10{
+    display: flex;
+    grid-gap: 0;
+    grid-template-columns: repeat(16,1fr);
+    grid-template-rows:repeat(16,20px);
+    grid-template-areas: 
+        "pixel-1 pixel-2 pixel-3 pixel-4 pixel-5 pixel-6 pixel-7 pixel-8 pixel-9 pixel-10 pixel-11 pixel-12 pixel-13 pixel-14 pixel-15 pixel-16";
+        div{
+            width: 20px;
+            height: 20px;
+        }
+        .p-1{
+            background-color: $fondo;
+            grid-area: pixel-1;
+        }
+        .p-2{
+            background-color: $fondo;
+            grid-area: pixel-2;
+        }
+        .p-3{
+            background-color: $light-skin;
+            grid-area: pixel-3;
+        }
+        .p-4{
+            background-color: $light-skin;
+            grid-area: pixel-4;
+        }
+        .p-5{
+            background-color: $light-skin;
+            grid-area: pixel-5;
+        }
+        .p-6{
+            background-color: $face-skin;
+            grid-area: pixel-6;
+        }
+        .p-7{
+            background-color: $face-skin;
+            grid-area: pixel-7;
+        }
+        .p-8{
+            background-color: $face-skin;
+            grid-area: pixel-8;
+        }
+        .p-9{
+            background-color: $nose-color;
+            grid-area: pixel-9;
+        }
+        .p-10{
+            background-color: $face-skin;
+            grid-area: pixel-10;
+        }
+        .p-11{
+            background-color: $face-skin;
+            grid-area: pixel-11;
+        }
+        .p-12{
+            background-color: $face-skin;
+            grid-area: pixel-12;
+        }
+        .p-13{
+            background-color: $face-skin;
+            grid-area: pixel-13;
+        }
+        .p-14{
+            background-color: $face-skin;
+            grid-area: pixel-14;
+        }
+        .p-15{
+            background-color: $light-skin;
+            grid-area: pixel-15;
+        }
+        .p-16{
+            background-color: $fondo;
+            grid-area: pixel-16;
+        }
+}
+.line-11{
+    display: flex;
+    grid-gap: 0;
+    grid-template-columns: repeat(16,1fr);
+    grid-template-rows:repeat(16,20px);
+    grid-template-areas: 
+        "pixel-1 pixel-2 pixel-3 pixel-4 pixel-5 pixel-6 pixel-7 pixel-8 pixel-9 pixel-10 pixel-11 pixel-12 pixel-13 pixel-14 pixel-15 pixel-16";
+        div{
+            width: 20px;
+            height: 20px;
+        }
+        .p-1{
+            background-color: $fondo;
+            grid-area: pixel-1;
+        }
+        .p-2{
+            background-color: $fondo;
+            grid-area: pixel-2;
+        }
+        .p-3{
+            background-color: $fondo;
+            grid-area: pixel-3;
+        }
+        .p-4{
+            background-color: $beard-color-1;
+            grid-area: pixel-4;
+        }
+        .p-5{
+            background-color: $light-skin;
+            grid-area: pixel-5;
+        }
+        .p-6{
+            background-color: $light-skin;
+            grid-area: pixel-6;
+        }
+        .p-7{
+            background-color: $face-skin;
+            grid-area: pixel-7;
+        }
+        .p-8{
+            background-color: $nose-color;
+            grid-area: pixel-8;
+        }
+        .p-9{
+            background-color: $light-skin;
+            grid-area: pixel-9;
+        }
+        .p-10{
+            background-color: $nose-color;
+            grid-area: pixel-10;
+        }
+        .p-11{
+            background-color: $face-skin;
+            grid-area: pixel-11;
+        }
+        .p-12{
+            background-color: $face-skin;
+            grid-area: pixel-12;
+        }
+        .p-13{
+            background-color: $face-skin;
+            grid-area: pixel-13;
+        }
+        .p-14{
+            background-color: $face-skin;
+            grid-area: pixel-14;
+        }
+        .p-15{
+            background-color: $beard-color-1;
+            grid-area: pixel-15;
+        }
+        .p-16{
+            background-color: $fondo;
+            grid-area: pixel-16;
+        }
+}
+.line-12{
+    display: flex;
+    grid-gap: 0;
+    grid-template-columns: repeat(16,1fr);
+    grid-template-rows:repeat(16,20px);
+    grid-template-areas: 
+        "pixel-1 pixel-2 pixel-3 pixel-4 pixel-5 pixel-6 pixel-7 pixel-8 pixel-9 pixel-10 pixel-11 pixel-12 pixel-13 pixel-14 pixel-15 pixel-16";
+        div{
+            width: 20px;
+            height: 20px;
+        }
+        .p-1{
+            background-color: $fondo;
+            grid-area: pixel-1;
+        }
+        .p-2{
+            background-color: $fondo;
+            grid-area: pixel-2;
+        }
+        .p-3{
+            background-color: $fondo;
+            grid-area: pixel-3;
+        }
+        .p-4{
+            background-color: $beard-color-2;
+            grid-area: pixel-4;
+        }
+        .p-5{
+            background-color: $face-skin;
+            grid-area: pixel-5;
+        }
+        .p-6{
+            background-color: $light-skin;
+            grid-area: pixel-6;
+        }
+        .p-7{
+            background-color: $beard-color-1;
+            grid-area: pixel-7;
+        }
+        .p-8{
+            background-color: $beard-color-1;
+            grid-area: pixel-8;
+        }
+        .p-9{
+            background-color: $beard-color-1;
+            grid-area: pixel-9;
+        }
+        .p-10{
+            background-color: $beard-color-1;
+            grid-area: pixel-10;
+        }
+        .p-11{
+            background-color: $beard-color-1;
+            grid-area: pixel-11;
+        }
+        .p-12{
+            background-color: $face-skin;
+            grid-area: pixel-12;
+        }
+        .p-13{
+            background-color: $face-skin;
+            grid-area: pixel-13;
+        }
+        .p-14{
+            background-color: $beard-color-1;
+            grid-area: pixel-14;
+        }
+        .p-15{
+            background-color: $beard-color-1;
+            grid-area: pixel-15;
+        }
+        .p-16{
+            background-color: $fondo;
+            grid-area: pixel-16;
+        }
+}
+.line-13{
+    display: flex;
+    grid-gap: 0;
+    grid-template-columns: repeat(16,1fr);
+    grid-template-rows:repeat(16,20px);
+    grid-template-areas: 
+        "pixel-1 pixel-2 pixel-3 pixel-4 pixel-5 pixel-6 pixel-7 pixel-8 pixel-9 pixel-10 pixel-11 pixel-12 pixel-13 pixel-14 pixel-15 pixel-16";
+        div{
+            width: 20px;
+            height: 20px;
+        }
+        .p-1{
+            background-color: $fondo;
+            grid-area: pixel-1;
+        }
+        .p-2{
+            background-color: $fondo;
+            grid-area: pixel-2;
+        }
+        .p-3{
+            background-color: $fondo;
+            grid-area: pixel-3;
+        }
+        .p-4{
+            background-color: $beard-color-2;
+            grid-area: pixel-4;
+        }
+        .p-5{
+            background-color: $beard-color-1;
+            grid-area: pixel-5;
+        }
+        .p-6{
+            background-color: $face-skin;
+            grid-area: pixel-6;
+        }
+        .p-7{
+            background-color: $beard-color-1;
+            grid-area: pixel-7;
+        }
+        .p-8{
+            background-color: $lips-color;
+            grid-area: pixel-8;
+        }
+        .p-9{
+            background-color: $lips-color;
+            grid-area: pixel-9;
+        }
+        .p-10{
+            background-color: $lips-color;
+            grid-area: pixel-10;
+        }
+        .p-11{
+            background-color: $beard-color-1;
+            grid-area: pixel-11;
+        }
+        .p-12{
+            background-color: $face-skin;
+            grid-area: pixel-12;
+        }
+        .p-13{
+            background-color: $beard-color-1;
+            grid-area: pixel-13;
+        }
+        .p-14{
+            background-color: $beard-color-1;
+            grid-area: pixel-14;
+        }
+        .p-15{
+            background-color: $beard-color-1;
+            grid-area: pixel-15;
+        }
+        .p-16{
+            background-color: $fondo;
+            grid-area: pixel-16;
+        }
+}
+.line-14{
+    display: flex;
+    grid-gap: 0;
+    grid-template-columns: repeat(16,1fr);
+    grid-template-rows:repeat(16,20px);
+    grid-template-areas: 
+        "pixel-1 pixel-2 pixel-3 pixel-4 pixel-5 pixel-6 pixel-7 pixel-8 pixel-9 pixel-10 pixel-11 pixel-12 pixel-13 pixel-14 pixel-15 pixel-16";
+        div{
+            width: 20px;
+            height: 20px;
+        }
+        .p-1{
+            background-color: $fondo;
+            grid-area: pixel-1;
+        }
+        .p-2{
+            background-color: $fondo;
+            grid-area: pixel-2;
+        }
+        .p-3{
+            background-color: $fondo;
+            grid-area: pixel-3;
+        }
+        .p-4{
+            background-color: $beard-color-1;
+            grid-area: pixel-4;
+        }
+        .p-5{
+            background-color: $beard-color-2;
+            grid-area: pixel-5;
+        }
+        .p-6{
+            background-color: $face-skin;
+            grid-area: pixel-6;
+        }
+        .p-7{
+            background-color: $face-skin;
+            grid-area: pixel-7;
+        }
+        .p-8{
+            background-color: $face-skin;
+            grid-area: pixel-8;
+        }
+        .p-9{
+            background-color: $face-skin;
+            grid-area: pixel-9;
+        }
+        .p-10{
+            background-color: $face-skin;
+            grid-area: pixel-10;
+        }
+        .p-11{
+            background-color: $face-skin;
+            grid-area: pixel-11;
+        }
+        .p-12{
+            background-color: $face-skin;
+            grid-area: pixel-12;
+        }
+        .p-13{
+            background-color: $beard-color-1;
+            grid-area: pixel-13;
+        }
+        .p-14{
+            background-color: $beard-color-1;
+            grid-area: pixel-14;
+        }
+        .p-15{
+            background-color: $fondo;
+            grid-area: pixel-15;
+        }
+        .p-16{
+            background-color: $fondo;
+            grid-area: pixel-16;
+        }
+}
+.line-15{
+    display: flex;
+    grid-gap: 0;
+    grid-template-columns: repeat(16,1fr);
+    grid-template-rows:repeat(16,20px);
+    grid-template-areas: 
+        "pixel-1 pixel-2 pixel-3 pixel-4 pixel-5 pixel-6 pixel-7 pixel-8 pixel-9 pixel-10 pixel-11 pixel-12 pixel-13 pixel-14 pixel-15 pixel-16";
+        div{
+            width: 20px;
+            height: 20px;
+        }
+        .p-1{
+            background-color: $fondo;
+            grid-area: pixel-1;
+        }
+        .p-2{
+            background-color: $fondo;
+            grid-area: pixel-2;
+        }
+        .p-3{
+            background-color: $fondo;
+            grid-area: pixel-3;
+        }
+        .p-4{
+            background-color: $fondo;
+            grid-area: pixel-4;
+        }
+        .p-5{
+            background-color: $beard-color-2;
+            grid-area: pixel-5;
+        }
+        .p-6{
+            background-color: $beard-color-1;
+            grid-area: pixel-6;
+        }
+        .p-7{
+            background-color: $face-skin;
+            grid-area: pixel-7;
+        }
+        .p-8{
+            background-color: $face-skin;
+            grid-area: pixel-8;
+        }
+        .p-9{
+            background-color: $beard-color-1;
+            grid-area: pixel-9;
+        }
+        .p-10{
+            background-color: $face-skin;
+            grid-area: pixel-10;
+        }
+        .p-11{
+            background-color: $face-skin;
+            grid-area: pixel-11;
+        }
+        .p-12{
+            background-color: $face-skin;
+            grid-area: pixel-12;
+        }
+        .p-13{
+            background-color: $beard-color-1;
+            grid-area: pixel-13;
+        }
+        .p-14{
+            background-color: $fondo;
+            grid-area: pixel-14;
+        }
+        .p-15{
+            background-color: $fondo;
+            grid-area: pixel-15;
+        }
+        .p-16{
+            background-color: $fondo;
+            grid-area: pixel-16;
+        }
+}
+.line-16{
+    display: flex;
+    grid-gap: 0;
+    grid-template-columns: repeat(16,1fr);
+    grid-template-rows:repeat(16,20px);
+    grid-template-areas: 
+        "pixel-1 pixel-2 pixel-3 pixel-4 pixel-5 pixel-6 pixel-7 pixel-8 pixel-9 pixel-10 pixel-11 pixel-12 pixel-13 pixel-14 pixel-15 pixel-16";
+        div{
+            width: 20px;
+            height: 20px;
+        }
+        .p-1{
+            background-color: $fondo;
+            grid-area: pixel-1;
+        }
+        .p-2{
+            background-color: $fondo;
+            grid-area: pixel-2;
+        }
+        .p-3{
+            background-color: $fondo;
+            grid-area: pixel-3;
+        }
+        .p-4{
+            background-color: $fondo;
+            grid-area: pixel-4;
+        }
+        .p-5{
+            background-color: $fondo;
+            grid-area: pixel-5;
+        }
+        .p-6{
+            background-color: $beard-color-3;
+            grid-area: pixel-6;
+        }
+        .p-7{
+            background-color: $beard-color-2;
+            grid-area: pixel-7;
+        }
+        .p-8{
+            background-color: $beard-color-1;
+            grid-area: pixel-8;
+        }
+        .p-9{
+            background-color: $beard-color-2;
+            grid-area: pixel-9;
+        }
+        .p-10{
+            background-color: $beard-color-1;
+            grid-area: pixel-10;
+        }
+        .p-11{
+            background-color: $beard-color-1;
+            grid-area: pixel-11;
+        }
+        .p-12{
+            background-color: $beard-color-2;
+            grid-area: pixel-12;
+        }
+        .p-13{
+            background-color: $fondo;
+            grid-area: pixel-13;
+        }
+        .p-14{
+            background-color: $fondo;
+            grid-area: pixel-14;
+        }
+        .p-15{
+            background-color: $fondo;
+            grid-area: pixel-15;
+        }
+        .p-16{
+            background-color: $fondo;
+            grid-area: pixel-16;
+        }
+}
+.line-17{
+    display: flex;
+    grid-gap: 0;
+    grid-template-columns: repeat(16,1fr);
+    grid-template-rows:repeat(16,20px);
+    grid-template-areas: 
+        "pixel-1 pixel-2 pixel-3 pixel-4 pixel-5 pixel-6 pixel-7 pixel-8 pixel-9 pixel-10 pixel-11 pixel-12 pixel-13 pixel-14 pixel-15 pixel-16";
+        div{
+            width: 20px;
+            height: 20px;
+        }
+        .p-1{
+            background-color: $fondo;
+            grid-area: pixel-1;
+        }
+        .p-2{
+            background-color: $fondo;
+            grid-area: pixel-2;
+        }
+        .p-3{
+            background-color: $fondo;
+            grid-area: pixel-3;
+        }
+        .p-4{
+            background-color: $fondo;
+            grid-area: pixel-4;
+        }
+        .p-5{
+            background-color: $neck-color;
+            grid-area: pixel-5;
+        }
+        .p-6{
+            background-color: $neck-color;
+            grid-area: pixel-6;
+        }
+        .p-7{
+            background-color: $beard-color-4;
+            grid-area: pixel-7;
+        }
+        .p-8{
+            background-color: $beard-color-2;
+            grid-area: pixel-8;
+        }
+        .p-9{
+            background-color: $beard-color-1;
+            grid-area: pixel-9;
+        }
+        .p-10{
+            background-color: $beard-color-1;
+            grid-area: pixel-10;
+        }
+        .p-11{
+            background-color: $beard-color-1;
+            grid-area: pixel-11;
+        }
+        .p-12{
+            background-color: $neck-color;
+            grid-area: pixel-12;
+        }
+        .p-13{
+            background-color: $fondo;
+            grid-area: pixel-13;
+        }
+        .p-14{
+            background-color: $fondo;
+            grid-area: pixel-14;
+        }
+        .p-15{
+            background-color: $fondo;
+            grid-area: pixel-15;
+        }
+        .p-16{
+            background-color: $fondo;
+            grid-area: pixel-16;
+        }
+}
+.line-18{
+    display: flex;
+    grid-gap: 0;
+    grid-template-columns: repeat(16,1fr);
+    grid-template-rows:repeat(16,20px);
+    grid-template-areas: 
+        "pixel-1 pixel-2 pixel-3 pixel-4 pixel-5 pixel-6 pixel-7 pixel-8 pixel-9 pixel-10 pixel-11 pixel-12 pixel-13 pixel-14 pixel-15 pixel-16";
+        div{
+            width: 20px;
+            height: 20px;
+        }
+        .p-1{
+            background-color: $fondo;
+            grid-area: pixel-1;
+        }
+        .p-2{
+            background-color: $fondo;
+            grid-area: pixel-2;
+        }
+        .p-3{
+            background-color: $jacket-color-1;
+            grid-area: pixel-3;
+        }
+        .p-4{
+            background-color: $neck-color;
+            grid-area: pixel-4;
+        }
+        .p-5{
+            background-color: $neck-color;
+            grid-area: pixel-5;
+        }
+        .p-6{
+            background-color: $neck-color;
+            grid-area: pixel-6;
+        }
+        .p-7{
+            background-color: $neck-color;
+            grid-area: pixel-7;
+        }
+        .p-8{
+            background-color: $beard-color-1;
+            grid-area: pixel-8;
+        }
+        .p-9{
+            background-color: $beard-color-1;
+            grid-area: pixel-9;
+        }
+        .p-10{
+            background-color: $beard-color-1;
+            grid-area: pixel-10;
+        }
+        .p-11{
+            background-color: $neck-color;
+            grid-area: pixel-11;
+        }
+        .p-12{
+            background-color: $neck-color;
+            grid-area: pixel-12;
+        }
+        .p-13{
+            background-color: $neck-color;
+            grid-area: pixel-13;
+        }
+        .p-14{
+            background-color: $jacket-color-1;
+            grid-area: pixel-14;
+        }
+        .p-15{
+            background-color: $fondo;
+            grid-area: pixel-15;
+        }
+        .p-16{
+            background-color: $fondo;
+            grid-area: pixel-16;
+        }
+}
+.line-19{
+    display: flex;
+    grid-gap: 0;
+    grid-template-columns: repeat(16,1fr);
+    grid-template-rows:repeat(16,20px);
+    grid-template-areas: 
+        "pixel-1 pixel-2 pixel-3 pixel-4 pixel-5 pixel-6 pixel-7 pixel-8 pixel-9 pixel-10 pixel-11 pixel-12 pixel-13 pixel-14 pixel-15 pixel-16";
+        div{
+            width: 20px;
+            height: 20px;
+        }
+        .p-1{
+            background-color: $fondo;
+            grid-area: pixel-1;
+        }
+        .p-2{
+            background-color: $jacket-color-1;
+            grid-area: pixel-2;
+        }
+        .p-3{
+            background-color: $jacket-color-2;
+            grid-area: pixel-3;
+        }
+        .p-4{
+            background-color: $jacket-color-1;
+            grid-area: pixel-4;
+        }
+        .p-5{
+            background-color: $jacket-color-2;
+            grid-area: pixel-5;
+        }
+        .p-6{
+            background-color: $jacket-color-1;
+            grid-area: pixel-6;
+        }
+        .p-7{
+            background-color: $jacket-color-2;
+            grid-area: pixel-7;
+        }
+        .p-8{
+            background-color: $beard-color-1;
+            grid-area: pixel-8;
+        }
+        .p-9{
+            background-color: $beard-color-2;
+            grid-area: pixel-9;
+        }
+        .p-10{
+            background-color: $beard-color-1;
+            grid-area: pixel-10;
+        }
+        .p-11{
+            background-color: $jacket-color-2;
+            grid-area: pixel-11;
+        }
+        .p-12{
+            background-color: $jacket-color-1;
+            grid-area: pixel-12;
+        }
+        .p-13{
+            background-color: $jacket-color-1;
+            grid-area: pixel-13;
+        }
+        .p-14{
+            background-color: $jacket-color-2;
+            grid-area: pixel-14;
+        }
+        .p-15{
+            background-color: $fondo;
+            grid-area: pixel-15;
+        }
+        .p-16{
+            background-color: $fondo;
+            grid-area: pixel-16;
+        }
+}
+.line-20{
+    display: flex;
+    grid-gap: 0;
+    grid-template-columns: repeat(16,1fr);
+    grid-template-rows:repeat(16,20px);
+    grid-template-areas: 
+        "pixel-1 pixel-2 pixel-3 pixel-4 pixel-5 pixel-6 pixel-7 pixel-8 pixel-9 pixel-10 pixel-11 pixel-12 pixel-13 pixel-14 pixel-15 pixel-16";
+        div{
+            width: 20px;
+            height: 20px;
+        }
+        .p-1{
+            background-color: $fondo;
+            grid-area: pixel-1;
+        }
+        .p-2{
+            background-color: $fondo;
+            grid-area: pixel-2;
+        }
+        .p-3{
+            background-color: $fondo;
+            grid-area: pixel-3;
+        }
+        .p-4{
+            background-color: $fondo;
+            grid-area: pixel-4;
+        }
+        .p-5{
+            background-color: $fondo;
+            grid-area: pixel-5;
+        }
+        .p-6{
+            background-color: $fondo;
+            grid-area: pixel-6;
+        }
+        .p-7{
+            background-color: $fondo;
+            grid-area: pixel-7;
+        }
+        .p-8{
+            background-color: $fondo;
+            grid-area: pixel-8;
+        }
+        .p-9{
+            background-color: $fondo;
+            grid-area: pixel-9;
+        }
+        .p-10{
+            background-color: $fondo;
+            grid-area: pixel-10;
+        }
+        .p-11{
+            background-color: $fondo;
+            grid-area: pixel-11;
+        }
+        .p-12{
+            background-color: $fondo;
+            grid-area: pixel-12;
+        }
+        .p-13{
+            background-color: $fondo;
+            grid-area: pixel-13;
+        }
+        .p-14{
+            background-color: $fondo;
+            grid-area: pixel-14;
+        }
+        .p-15{
+            background-color: $fondo;
+            grid-area: pixel-15;
+        }
+        .p-16{
+            background-color: $fondo;
+            grid-area: pixel-16;
+        }
+}

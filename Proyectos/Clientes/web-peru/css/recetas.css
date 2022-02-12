@@ -1,0 +1,82 @@
+@font-face {
+    font-family: 'Lobster';
+    src: url('font/Lobster-Regular.ttf'); 
+    font-weight: normal;
+    font-style: normal;
+    }
+@font-face {
+    font-family: 'AppleGaramond';
+    src: url('font/AppleGaramond.ttf'); 
+    font-weight: normal;
+    font-style: normal;
+    }
+body{
+    margin: 0;
+    padding: 0;
+}
+.receta-container{
+    position: relative;
+    width: 75vw;
+    padding-bottom: 40px;
+    margin: 0 auto;
+    margin-bottom: 60px;
+    color: rgb(132, 132, 132);
+    border-bottom: 3px solid rgb(175, 175, 175);
+    font-family: 'AppleGaramond';
+    font-size: 17px;
+}
+.receta-cover{ 
+    position: relative;
+    width: 100%;
+    height: 400px;
+    background-image: url(../Images/rocoto-relleno.jpg);
+    background-size: cover;
+}
+.receta-cover span{
+    background-color: #EC502C;
+    color: #ffffff;
+    position: absolute;
+    bottom: -40px;
+    left: 40px;
+    font-size: 45px;
+    padding: 15px 50px 15px 50px;
+    line-height: 40px;
+    font-family: 'Lobster';
+}
+.receta{
+    margin-top: 50px;
+}
+.receta div{
+    display: inline-block; 
+    position: relative;
+    top: 0;
+}
+.ingredientes{
+    width: 40%;
+}
+.ingredientes p{
+    display: inline-block;
+    line-height: 25px;
+    margin:20px 30px 0 20px;
+    
+}
+.preparacion{
+    width: 59%;
+}
+.preparacion p{
+    margin-left: 30px;
+}
+.receta-container h1{
+    margin: 0;
+    font-weight: 1;
+}
+@media only screen and (max-width: 459px) {
+    .list-product .options-menu li{
+        padding: 5px;
+        margin: 5px 15px 5px 15px;
+        cursor: pointer;
+    }
+    .list-product .options-menu li img{
+        width: 60px;
+    }
+}
