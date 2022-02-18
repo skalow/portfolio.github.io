@@ -778,6 +778,11 @@ header .special {
   transform: scale(1.1);
   box-shadow: 0 0 15px White;
 }
+.media li .material-icons {
+  font-size: 30px;
+  position: relative;
+  top: 3px;
+}
 
 /* -------- Media Mobile -------- */
 @media (max-width: 1000px) {
