@@ -507,7 +507,7 @@ header .special {
   font-size: 14px;
 }
 .menu div {
-  background-color: crimson;
+  background-color: #11ac33;
   padding: 10px;
   transition: 0.4s;
   cursor: pointer;
@@ -594,7 +594,7 @@ header .special {
   position: absolute;
   right: 20px;
   bottom: 20px;
-  background-color: crimson;
+  background-color: #11ac33;
   border: none;
   padding: 5px 10px 5px 10px;
   cursor: pointer;
@@ -603,7 +603,7 @@ header .special {
 }
 
 .bot-right:hover {
-  background-color: #7e0a21;
+  background-color: #58da6c;
   transition: 0.3s;
   padding: 5px 10px 5px 50px;
 }
@@ -612,7 +612,7 @@ header .special {
   position: absolute;
   left: 20px;
   bottom: 20px;
-  background-color: crimson;
+  background-color: #11ac33;
   border: none;
   padding: 5px 10px 5px 10px;
   cursor: pointer;
@@ -621,7 +621,7 @@ header .special {
 }
 
 .bot-left:hover, .bot-top:hover {
-  background-color: #7e0a21;
+  background-color: #58da6c;
   transition: 0.3s;
   padding: 5px 50px 5px 10px;
 }
@@ -630,7 +630,7 @@ header .special {
   position: absolute;
   left: 20px;
   top: 120px;
-  background-color: crimson;
+  background-color: #11ac33;
   border: none;
   padding: 5px 10px 5px 10px;
   cursor: pointer;
